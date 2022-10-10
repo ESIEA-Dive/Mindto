@@ -1,21 +1,23 @@
 .ContactSectionStyle{
     h1 {
         color: var(--secondary-color); 
-        font-family: var(--font-base);
+        font-family: "OctoberTamil";
         font-size: 300%;
         text-align: center;
     }
     
     h2 {
+        margin-top: 10px;
+        margin-bottom: -30px;
         color: var(--white-color);
-        font-family: var(--font-base);
+        font-family: "GilroyLight";
         font-style: italic;
         text-align: center;
     }
     
     h3 {
         margin-top: 2rem;
-        font-family: var(--font-base);
+        font-family: "GilroyLight";
         color: var(--white-color);
         font-style: italic;
         text-align: justify;
@@ -28,6 +30,8 @@
     width:100%;
     height: 60%;
     object-fit: cover;
+    border-radius: 10px;
+    opacity: 70%;
 }
 
 .right{
@@ -38,50 +42,64 @@
         margin-bottom: 2rem;
       }
       label {
-        font-family: var(--font-base);
+        font-family: "GilroyMedium";
         font-size: 1.8rem;
         color: var(--white-color);
       }
       input {
         width: 100%;
-        font-family: var(--font-base);
+        font-family: "GilroyRegular";
         font-size: 1rem;
         padding: 1rem;
-        color: var(--primary-color);
-        background-color: var(--lightGray-color);
+        color: var(--white-color);
+        background-color: #525252;
         outline: none;
         border: none;
         border-radius: 10px;
         margin-top: 1rem;
+      }
+      input:focus {
+        border: 2px solid var(--secondary-color);
       }
       textarea {
         width: 100%;
         font-family: var(--font-base);
         font-size: 1rem;
         padding: 1.2rem;
-        color: var(--primary-color);
-        background-color: var(--lightGray-color);
+        color: var(--white-color);
+        background-color: #525252;
         outline: none;
         border: none;
         border-radius: 10px;
         margin-top: 1rem;
         min-height: 250px;
+        max-height: 750px;
         resize: vertical;
+      }
+      textarea:focus {
+        border: 2px solid var(--secondary-color);
       }
       button[type='submit'] {
         background-color: var(--secondary-color);
         color: var(--white-color);
-        font-family: var(--font-base);
-        font-size: 2rem;
+        font-family: "GilroyMedium";
+        font-size: 1.5rem;
         display: inline-block;
         outline: none;
         border: none;
-        padding: 1rem 4rem;
+        justify-content: center;
+        padding: 15px 40px;
         border-radius: 10px;
+      }
+      button:hover {
         cursor: pointer;
+        background-color: var(--white-color);
+        color: var(--secondary-color);
+        transition: all 0.3s ease;
       }
     }
 }
+
 
 
 .ContactSectionStyle {
