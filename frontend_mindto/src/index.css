@@ -1,7 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+@font-face {
+  font-family: GirlroyBold ;
+  src: url(./fonts/Gilroy-Bold.otf);
+}
+
+@font-face {
+  font-family: GilroyLight;
+  src: url(./fonts/Gilroy-Light.otf);
+}
+
+@font-face {
+  font-family: GilroyMedium ;
+  src: url(./fonts/Gilroy-Medium.otf);
+}
+
+@font-face {
+  font-family: GilroyRegular ;
+  src: url(./fonts/Gilroy-Regular.otf);
+}
+
+@font-face {
+  font-family: OctoberTamil;
+  src: url(./fonts/OctoberTamil.ttc);
+}
 
 :root {
-  --font-base: "DM Sans", sans-serif;
+  --font-base: "OctoberTamil", sans-serif;
 
   --primary-color: #282828;
   --secondary-color: #00C674;

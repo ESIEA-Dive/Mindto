@@ -4,7 +4,7 @@ import './Header.scss';
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <div className='app__container'>Header</div>
   );
 };
 

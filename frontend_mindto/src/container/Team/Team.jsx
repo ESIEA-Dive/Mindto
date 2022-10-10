@@ -4,7 +4,7 @@ import './Team.scss';
 
 const Team = () => {
   return (
-    <div>Team</div>
+    <div className='app__container'>Team</div>
   );
 };
 
