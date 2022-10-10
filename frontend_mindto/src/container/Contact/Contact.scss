@@ -1,24 +1,28 @@
-h1 {
-    color: var(--secondary-color); 
-    font-family: var(--font-base);
-    font-size: 300%;
-    text-align: center;
+.ContactSectionStyle{
+    h1 {
+        color: var(--secondary-color); 
+        font-family: var(--font-base);
+        font-size: 300%;
+        text-align: center;
+    }
+    
+    h2 {
+        color: var(--white-color);
+        font-family: var(--font-base);
+        font-style: italic;
+        text-align: center;
+    }
+    
+    h3 {
+        margin-top: 2rem;
+        font-family: var(--font-base);
+        color: var(--white-color);
+        font-style: italic;
+        text-align: justify;
+    }
 }
 
-h2 {
-    color: var(--white-color);
-    font-family: var(--font-base);
-    font-style: italic;
-    text-align: center;
-}
 
-h3 {
-    margin-top: 2rem;
-    font-family: var(--font-base);
-    color: var(--white-color);
-    font-style: italic;
-    text-align: justify;
-}
 
 .image {
     width:100%;
@@ -26,55 +30,57 @@ h3 {
     object-fit: cover;
 }
 
-form {
-    width: 100%;
-  .form-group {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-  label {
-    font-family: var(--font-base);
-    font-size: 1.8rem;
-    color: var(--white-color);
-  }
-  input {
-    width: 100%;
-    font-family: var(--font-base);
-    font-size: 1rem;
-    padding: 1rem;
-    color: var(--primary-color);
-    background-color: var(--lightGray-color);
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    margin-top: 1rem;
-  }
-  textarea {
-    width: 100%;
-    font-family: var(--font-base);
-    font-size: 1rem;
-    padding: 1.2rem;
-    color: var(--primary-color);
-    background-color: var(--lightGray-color);
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    margin-top: 1rem;
-    min-height: 250px;
-    resize: vertical;
-  }
-  button[type='submit'] {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
-    font-family: var(--font-base);
-    font-size: 2rem;
-    display: inline-block;
-    outline: none;
-    border: none;
-    padding: 1rem 4rem;
-    border-radius: 10px;
-    cursor: pointer;
-  }
+.right{
+    form {
+        width: 100%;
+      .form-group {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      label {
+        font-family: var(--font-base);
+        font-size: 1.8rem;
+        color: var(--white-color);
+      }
+      input {
+        width: 100%;
+        font-family: var(--font-base);
+        font-size: 1rem;
+        padding: 1rem;
+        color: var(--primary-color);
+        background-color: var(--lightGray-color);
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        margin-top: 1rem;
+      }
+      textarea {
+        width: 100%;
+        font-family: var(--font-base);
+        font-size: 1rem;
+        padding: 1.2rem;
+        color: var(--primary-color);
+        background-color: var(--lightGray-color);
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        margin-top: 1rem;
+        min-height: 250px;
+        resize: vertical;
+      }
+      button[type='submit'] {
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+        font-family: var(--font-base);
+        font-size: 2rem;
+        display: inline-block;
+        outline: none;
+        border: none;
+        padding: 1rem 4rem;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
 }
 
 
