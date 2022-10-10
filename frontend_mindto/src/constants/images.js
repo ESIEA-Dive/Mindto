@@ -8,6 +8,7 @@ const imgs = {
     header_video,
     apple_store,
     google_play,
+    contact,
 };
 
 export default imgs; 
