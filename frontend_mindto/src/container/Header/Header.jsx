@@ -11,10 +11,7 @@ const Header = () => {
       <div className="overlay"></div>
       <video src={images.header_video} autoPlay loop muted />
       <div className="content">
-        <h1>An innovative <br></br>technology, to engage <br></br><span className="green">young athletes</span> on <br></br>mental development</h1>
-        <div className="signin">
-          <button className="btn">Sign in</button>
-        </div>
+        <h1>An innovative educational platform <br/> to engage <span className='green'>student athletes</span> on <br/> mental development and well being</h1>
       </div>
     </div>
   );

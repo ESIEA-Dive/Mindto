@@ -11,7 +11,7 @@ const Navbar = () => {
   const [show, setShow] = useState(false);
 
   const changeBackground = () => {
-    if(window.scrollY >= 120) {
+    if(window.scrollY >= 220) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -27,16 +27,15 @@ const Navbar = () => {
       <img src={images.logo} alt='logo'></img>
     </div>
 
-      <ul className={navbar ? 'app__navbar-links active' : 'app__navbar-links'}>
-          {['home', 'purpose','header', 'pillars', 'transformation', 'team', 'contact'].map ((item) => (
+      <ul className='app__navbar-links'>
+          {['home', 'purpose', 'pillars', 'transformation', 'team', 'contact'].map ((item) => (
             <li className='app__flex p-text' key={`link-${item}`}>
               <a href={`#${item}`}>{item}</a>
-              <div />
             </li>
           ))}
       </ul>
 
-      <div className={navbar ? 'app__navbar-menu active' : 'app__navbar-menu'}>
+      <div className='app__navbar-menu'>
         <HiMenuAlt4 onClick={() => setShow(true)}/>
 
         {show && (
@@ -46,7 +45,7 @@ const Navbar = () => {
             >
               <HiX onClick={() => setShow(false)} />
               <ul>
-              {['home', 'purpose','header', 'pillars', 'transformation', 'team', 'contact'].map ((item) => (
+              {['home', 'purpose', 'pillars', 'transformation', 'team', 'contact'].map ((item) => (
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setShow(false)}>{item}</a>
                 </li>
