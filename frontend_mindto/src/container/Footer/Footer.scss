@@ -4,6 +4,9 @@
         bottom: 0;
         left: 0;
         width: 100%;
+        @media screen and (max-width: 575px) {
+            text-align: center;
+        }
     }
     
     .footer-col {
@@ -12,7 +15,7 @@
     }
     
     .footer-col h4 {
-        font-size: 18px;
+        font-size: 1.2rem;
         color: var(--white-color);
         margin-bottom: 30px;
         margin-top: 30px;
@@ -23,12 +26,14 @@
     .footer-col h4::before {
         content: '';
         position: absolute;
-        left: 0;
         bottom: -6px;
         background-color: var(--secondary-color);
         height: 2px;
         box-sizing: border-box;
         width: 55px;
+        @media screen and (min-width: 576px) {
+            left: 0;
+        }
     }
     
     .footer-col ul li:not(:last-child) {
@@ -36,7 +41,7 @@
     }
     
     .footer-col ul li a {
-        font-size: 16px;
+        font-size: 1rem;
         text-transform: capitalize;
         color: var(--white-color);
         text-decoration: none;
@@ -133,6 +138,11 @@
     .newsletter {
         display: flex;
         flex-wrap: wrap;
+        @media screen and (max-width: 575px) {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
     
     input {
@@ -155,6 +165,9 @@
         margin-left: 10px;
         border-color: transparent;
         font-family: "GilroyMedium";
+        @media screen and (max-width: 1294px) {
+            margin-left: 0px;
+        }
     }
     
     .btnsend:hover {
@@ -207,7 +220,7 @@
         }
     }
     
-    @media(max-width: 574px) {
+    @media(max-width: 575px) {
         .footer-col {
             width: 100%;
         }
