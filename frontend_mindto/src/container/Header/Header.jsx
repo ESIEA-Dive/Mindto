@@ -1,6 +1,8 @@
 import React from 'react';
 import images from '../../constants/images';
 
+import { AppWrap } from '../../wrapper';
+
 import './Header.scss';
 
 const Header = () => {
@@ -18,4 +20,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AppWrap(Header,'home');
