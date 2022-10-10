@@ -6,35 +6,35 @@ import './Footer.scss';
 
 const Footer = () => {
   return (
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="footer-col">
+    <footer className="footer">
+      <div className="container">
+        <div className="row">
+          <div className="footer-col">
             <h4>Download App</h4>
             <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-            <a href="#" target="_blank" class="app-btn google-btn" role="button">
-              <span class="app-button-subtitle">Download on the</span>
-              <span class="app-button-title">Google Play</span>
+            <a href="#" target="_blank" className="app-btn google-btn" role="button">
+              <span className="app-button-subtitle">Download on</span>
+              <span className="app-button-title">Google Play</span>
             </a>
 
-            <a href="#" target="_blank" class="app-btn apple-btn" role="button">
-              <span class="app-button-subtitle">Download on the</span>
-              <span class="app-button-title">App Store</span>
+            <a href="#" target="_blank" className="app-btn apple-btn" role="button">
+              <span className="app-button-subtitle">Download on</span>
+              <span className="app-button-title">App Store</span>
             </a>
 
             <h4>Follow us</h4>
-            <div class="social-links">
-              <a href="#"><BsFacebook class="logo" /></a>
-              <a href="#"><BsTwitter class="logo" /></a>
-              <a href="#"><BsInstagram class="logo" /></a>
-              <a href="#"><RiLinkedinFill class="logo" /></a>
+            <div className="social-links">
+              <a href="#"><BsFacebook className="logo" /></a>
+              <a href="#"><BsTwitter className="logo" /></a>
+              <a href="#"><BsInstagram className="logo" /></a>
+              <a href="#"><RiLinkedinFill className="logo" /></a>
             </div>
           </div>
-          <div class="footer-col">
+          <div className="footer-col">
             <h4>Adress</h4>
             <div>
-              <p class="text">Siège social<br />
+              <p className="text">Siège social<br />
                 New York, Etats-Unis<br />
                 Adresse<br />
                 x xxxx x x , 12523 x xx</p>
@@ -43,19 +43,19 @@ const Footer = () => {
             <div>
               <form>
                 <label className="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</label>
-                <div class="newsletter">
+                <div className="newsletter">
                   <div>
                     <input placeholder='email...' type="text"></input>
                   </div>
                   <div>
-                    <button class="btnsend">Subscribe</button>
+                    <button className="btnsend">Subscribe</button>
                   </div>
                 </div>
               </form>
             </div>
           </div>
-          <div class="footer-col">
-            <div class="sections">
+          <div className="footer-col">
+            <div className="sections">
               <div>
                 <h4>Section 1</h4>
                 <ul>
@@ -82,8 +82,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <button class="btn-arrow-up"><RiArrowUpCircleFill size={50} /></button>
-      <div class="subfooter">
+      <button className="btn-arrow-up"><RiArrowUpCircleFill size={50} /></button>
+      <div className="subfooter">
         © 2022 Mindto, Inc. All rights reserved.
       </div>
     </footer>
