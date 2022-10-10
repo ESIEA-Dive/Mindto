@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { AppWrap } from '../../wrapper';
+
 import './Pillars.scss';
 
 const Pillars = () => {
@@ -8,4 +10,4 @@ const Pillars = () => {
   );
 };
 
-export default Pillars;
+export default AppWrap(Pillars,'pillar');

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { AppWrap } from '../../wrapper';
+
 import './Team.scss';
 
 const Team = () => {
@@ -8,4 +10,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default AppWrap(Team, 'team');

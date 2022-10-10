@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { AppWrap } from '../../wrapper';
+
 import './Purpose.scss';
 
 const Purpose = () => {
@@ -8,4 +10,4 @@ const Purpose = () => {
   );
 };
 
-export default Purpose;
+export default AppWrap(Purpose, 'purpose');

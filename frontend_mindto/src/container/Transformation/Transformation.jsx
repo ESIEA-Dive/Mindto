@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { AppWrap } from '../../wrapper';
+
 import './Transformation.scss';
 
 const Transformation = () => {
@@ -8,4 +10,4 @@ const Transformation = () => {
   );
 };
 
-export default Transformation
+export default AppWrap(Transformation, 'transformation');
