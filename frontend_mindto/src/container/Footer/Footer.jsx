@@ -44,9 +44,11 @@ const Footer = () => {
               <form>
                 <label className="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</label>
                 <div className="newsletter">
-                  <div>
-                    <input placeholder='email...' type="text"></input>
-                  </div>
+                  <input
+                    placeholder='email...'
+                    type="email"
+                    id="email"
+                    name="email" />
                   <div>
                     <button className="btnsend">Subscribe</button>
                   </div>
