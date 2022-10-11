@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useRef} from 'react';
+import emailjs from "@emailjs/browser";
+
 import image from '../../constants/images';
 
 import { AppWrap } from '../../wrapper';
@@ -6,6 +8,29 @@ import { AppWrap } from '../../wrapper';
 import './Contact.scss';
 
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_3qidbtp",
+        "template_moq8u3d",
+        form.current,
+        "0ttgpP2lKVwm9kHW6"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
     return (
       <div className='ContactSectionStyle'>
       <h1>
@@ -23,14 +48,14 @@ const Contact = () => {
           </p>
         </div>
         <div className='right'>
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <div className="form-group">
             <label htmlFor="name">
               <input
                 placeholder='Your name'
                 type="text"
                 id="name"
-                name="name"
+                name="user_name"
               />
             </label>
             </div>
@@ -40,7 +65,7 @@ const Contact = () => {
                   placeholder='Your email'
                   type="email"
                   id="email"
-                  name="email"
+                  name="user_email"
                 />
               </label>
             </div>
@@ -64,7 +89,7 @@ const Contact = () => {
                 />
               </label>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" value="Send">Submit</button>
           </form>
         </div>
       </div>
