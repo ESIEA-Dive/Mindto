@@ -130,14 +130,18 @@
             display: none;
         }
         .left {
-          margin-top: 10px;
+
+          margin: auto;
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
         .right {
           margin-top: -100px;
           max-width: 100%;
-        }
-        .right {
           padding: 4rem 1rem 2rem 1rem;
         }
+
     }
 }
