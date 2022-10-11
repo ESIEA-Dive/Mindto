@@ -1,6 +1,8 @@
 import React from 'react';
 import image from '../../constants/images';
 
+import { AppWrap } from '../../wrapper';
+
 import './Contact.scss';
 
 const Contact = () => {
@@ -68,7 +70,7 @@ const Contact = () => {
       </div>
     </div>
    
-  )
-}
+  );
+};
 
-export default Contact;
+export default AppWrap(Contact, 'contact');
