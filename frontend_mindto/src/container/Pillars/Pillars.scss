@@ -1,0 +1,101 @@
+.app__card-position {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.app__card{
+    
+    aspect-ratio: 1.1 ;
+    border: 0.5vmin solid var(--secondary-color);
+    width: 40vmin;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    margin: 2rem;
+    
+    &:hover::before {
+        background-position: 100% 100%;
+        transform: scale(1.08, 1.03);
+      }
+
+    &:hover {
+        > .app__card-content {
+            background-position: -10% 0%;
+        }
+        
+        > .card-icon {
+        color: white; 
+      }   
+    }
+
+    &::before {
+        background: linear-gradient(
+            130deg, 
+            transparent 0% 33%, 
+            var(--g1) 66%, 
+            var(--g2) 83.5%, 
+            var(--g3) 100%
+          );
+        background-position: 0% 0%;
+        background-size: 300% 300%;
+        content: "";
+        height: 100%;
+        left: 0px;
+        pointer-events: none;
+        position: absolute;
+        top: 0px;
+        transition: background-position 350ms ease, transform 350ms ease;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+  
+  .app__card-content {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.2) 8%, 
+      transparent 8%
+    );
+    background-position: 0% 0%;
+    background-size: 5vmin 5vmin;
+    height: calc(125% - 10vmin);
+    padding: 3vmin;
+    position: relative;
+    transition: background-position 350ms ease;
+    width: calc(125% - 10vmin);
+    z-index: 2;
+  }
+  
+  .app__card-title,
+  .card-subtitle {
+    color: white;
+    font-family: "OctoberTamil";
+    font-weight: 400;
+    margin: 0px;
+  }
+  
+  .app__card-title {
+    font-size: 3vmin;
+  }
+  
+  .card-subtitle {
+    font-size: 3vmin;
+    margin-top: 2vmin;
+  }
+  
+  .card-icon {
+    bottom: 0px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 9vmin;
+    left: 0px;
+    margin-left: 2.3vmin;
+    position: absolute;
+    transition: color 250ms ease;
+    z-index: 2;
+  }
