@@ -17,17 +17,15 @@ const Contact = () => {
           <img className='image' src={image.contact} width={500} height={500} ></img>
           <h3>
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
           </h3>
         </div>
         <div className='right'>
           <form>
             <div className="form-group">
             <label htmlFor="name">
-              Your Name
               <input
+                placeholder='Your name'
                 type="text"
                 id="name"
                 name="name"
@@ -36,8 +34,8 @@ const Contact = () => {
             </div>
             <div className="form-group">
               <label htmlFor="email">
-                Your Email
                 <input
+                  placeholder='Your email'
                   type="email"
                   id="email"
                   name="email"
@@ -46,8 +44,8 @@ const Contact = () => {
             </div>
             <div className="form-group">
               <label htmlFor="subject">
-                Subject
                 <input
+                  placeholder='Subject'
                   type="text"
                   id="subject"
                   name="subject"
@@ -56,8 +54,8 @@ const Contact = () => {
             </div>
             <div className="form-group">
               <label htmlFor="message">
-                Your message
                 <textarea
+                  placeholder='Your message'
                   type="text"
                   id="message"
                   name="message"

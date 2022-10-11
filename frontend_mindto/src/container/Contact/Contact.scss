@@ -1,14 +1,14 @@
 .ContactSectionStyle{
+  height: 100vh;
     h1 {
         color: var(--secondary-color); 
         font-family: "OctoberTamil";
-        font-size: 300%;
+        font-size: 48px;
         text-align: center;
     }
     
     h2 {
         margin-top: 10px;
-        margin-bottom: -30px;
         color: var(--white-color);
         font-family: "GilroyLight";
         font-style: italic;
@@ -28,7 +28,7 @@
 
 .image {
     width:100%;
-    height: 60%;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px;
     opacity: 70%;
@@ -37,19 +37,15 @@
 .right{
     form {
         width: 100%;
+        margin-top: -15px;
       .form-group {
         width: 100%;
-        margin-bottom: 2rem;
-      }
-      label {
-        font-family: "GilroyMedium";
-        font-size: 1.8rem;
-        color: var(--white-color);
+        margin-bottom: 10px;
       }
       input {
         width: 100%;
         font-family: "GilroyRegular";
-        font-size: 1rem;
+        font-size: 16px;
         padding: 1rem;
         color: var(--white-color);
         background-color: #525252;
@@ -63,17 +59,17 @@
       }
       textarea {
         width: 100%;
-        font-family: var(--font-base);
-        font-size: 1rem;
-        padding: 1.2rem;
+        font-family: "GilroyRegular";
+        font-size: 16px;
+        padding: 1rem;
         color: var(--white-color);
         background-color: #525252;
         outline: none;
         border: none;
         border-radius: 10px;
         margin-top: 1rem;
-        min-height: 250px;
-        max-height: 750px;
+        min-height: 200px;
+        max-height: 500px;
         resize: vertical;
       }
       textarea:focus {
@@ -83,7 +79,7 @@
         background-color: var(--secondary-color);
         color: var(--white-color);
         font-family: "GilroyMedium";
-        font-size: 1.5rem;
+        font-size: 16px;
         display: inline-block;
         outline: none;
         border: none;
@@ -107,7 +103,7 @@
     .contactSection__wrapper {
         display: flex;
         gap: 5rem;
-        margin-top: 7rem;
+        margin-top: 2rem;
         justify-content: center;
         position: relative;
     }
@@ -115,10 +111,10 @@
         position: absolute;
         content: '';
         width: 2px;
-        height: 86%;
+        height: 500px;
         background-color: var(--secondary-color);
         left: 50%;
-        top: 42%;
+        top: 50%;
         transform: translate(-50%, -50%);
     }
     .left {
