@@ -27,6 +27,10 @@
 :root {
   --font-base: "OctoberTamil", sans-serif;
 
+  --g3: rgb(51, 102, 76);
+  --g2: rgb(46, 42, 43);
+  --g1: rgb(0, 198 , 116 );
+
   --primary-color: #282828;
   --secondary-color: #00C674;
   --yellow-color: #FFE269;
