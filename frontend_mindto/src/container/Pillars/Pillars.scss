@@ -18,10 +18,12 @@
     flex-direction: column;
     position: relative;
     margin: 2rem;
+    border-radius: 25px;
     
     &:hover::before {
         background-position: 100% 100%;
         transform: scale(1.08, 1.03);
+        border-radius: 25px;
       }
 
     &:hover {
@@ -39,8 +41,8 @@
             130deg, 
             transparent 0% 33%, 
             var(--g1) 66%, 
-            var(--g2) 83.5%, 
-            var(--g3) 100%
+            var(--g3) 83.5%, 
+            var(--g2) 100%
           );
         background-position: 0% 0%;
         background-size: 300% 300%;
@@ -53,6 +55,7 @@
         transition: background-position 350ms ease, transform 350ms ease;
         width: 100%;
         z-index: 1;
+        border-radius: 25px;
     }
 }
 
