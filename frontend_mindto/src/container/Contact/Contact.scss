@@ -1,12 +1,11 @@
-.ContactSectionStyle{
-  height: 100%;
+.ContactSectionStyle {
+    height: 100%;
     h1 {
-        color: var(--secondary-color); 
+        color: var(--secondary-color);
         font-family: "OctoberTamil";
         font-size: 48px;
         text-align: center;
     }
-    
     h2 {
         margin-top: 10px;
         color: var(--white-color);
@@ -25,14 +24,14 @@
 }
 
 .image {
-    width:100%;
+    width: 100%;
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
     opacity: 70%;
 }
 
-.right{
+.right {
     form {
         width: 100%;
         margin-top: -1rem;
@@ -94,8 +93,6 @@
     }
 }
 
-
-
 .ContactSectionStyle {
     padding: 2rem 0;
     .contactSection__wrapper {
@@ -125,13 +122,12 @@
         width: 100%;
         max-width: 500px;
     }
-   
     @media only screen and (max-width: 768px) {
         .contactSection__wrapper {
-          flex-direction: column;
+            flex-direction: column;
         }
         .contactSection__wrapper::after {
-          display: none;
+            display: none;
         }
         .left {
           margin-top: 10px;
@@ -143,6 +139,5 @@
         .right {
           padding: 4rem 1rem 2rem 1rem;
         }
-      }
+    }
 }
-
