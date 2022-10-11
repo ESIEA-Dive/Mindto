@@ -15,10 +15,10 @@ const Contact = () => {
       <div className='contactSection__wrapper'>
         <div className='left'>
           <img className='image' src={image.contact} width={500} height={500} ></img>
-          <h3>
+          <p className='quote'>
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          </h3>
+          </p>
         </div>
         <div className='right'>
           <form>

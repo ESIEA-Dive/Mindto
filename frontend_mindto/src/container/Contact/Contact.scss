@@ -14,17 +14,15 @@
         font-style: italic;
         text-align: center;
     }
-    
-    h3 {
-        margin-top: 2rem;
-        font-family: "GilroyLight";
-        color: var(--white-color);
-        font-style: italic;
-        text-align: justify;
-    }
 }
 
-
+.quote {
+  margin-top: 2rem;
+  font-family: "GilroyLight";
+  color: var(--white-color);
+  font-style: italic;
+  text-align: justify;
+}
 
 .image {
     width:100%;
@@ -37,7 +35,7 @@
 .right{
     form {
         width: 100%;
-        margin-top: -15px;
+        margin-top: -1rem;
       .form-group {
         width: 100%;
         margin-bottom: 10px;
@@ -135,12 +133,15 @@
         .contactSection__wrapper::after {
           display: none;
         }
-        .left,
+        .left {
+          margin-top: 10px;
+        }
         .right {
+          margin-top: -100px;
           max-width: 100%;
         }
         .right {
-          padding: 4rem 2rem 2rem 2rem;
+          padding: 4rem 1rem 2rem 1rem;
         }
       }
 }
