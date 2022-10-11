@@ -1,4 +1,5 @@
 import React, {useRef} from 'react';
+import { useState } from 'react';
 import emailjs from "@emailjs/browser";
 
 import image from '../../constants/images';
@@ -7,7 +8,15 @@ import { AppWrap } from '../../wrapper';
 
 import './Contact.scss';
 
+const Result  = () => {
+  return (
+    <p className='message'>Message Sent !</p>
+  )
+}
+
 const Contact = () => {
+  const [isSend, showIsSend] = useState(false)
+
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -21,6 +30,7 @@ const Contact = () => {
       )
       .then(
         (result) => {
+          showIsSend(true);
           console.log(result.text);
           console.log("message sent");
           e.target.reset();
@@ -89,7 +99,12 @@ const Contact = () => {
                 />
               </label>
             </div>
-            <button type="submit" value="Send">Submit</button>
+            <div className='send'>
+              <button type="submit" value="Send">Submit</button>
+              {isSend ? <Result /> : null}
+              
+            </div>
+            
           </form>
         </div>
       </div>

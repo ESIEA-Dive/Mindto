@@ -32,6 +32,8 @@
     opacity: 70%;
 }
 
+
+
 .right {
     form {
         width: 100%;
@@ -91,6 +93,13 @@
             color: var(--secondary-color);
             transition: all 0.3s ease;
         }
+        .message {
+          margin: 10px 0;
+          font-size: 12px;
+          font-style: italic;
+          font-family: "GilroyLight";
+          color: var(--white-color);
+        }
     }
 }
 
@@ -107,7 +116,7 @@
         position: absolute;
         content: '';
         width: 2px;
-        height: 500px;
+        height: 100%;
         background-color: var(--secondary-color);
         left: 50%;
         top: 50%;
