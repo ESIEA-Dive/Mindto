@@ -48,7 +48,7 @@ const Footer = () => {
       </div>
       <button className="btn-arrow-up"><RiArrowUpCircleFill size={50} /></button>
       <div className="subfooter">
-        © 2022 Mindto, Inc. All rights reserved · Mentions légales
+        © 2022 Mindto, Inc. All rights reserved · <span className='mentions-legales'>Mentions légales</span>
       </div>
     </footer>
 
