@@ -8,7 +8,7 @@
 
 .app__card{
     
-    aspect-ratio: 1.1 ;
+    aspect-ratio: 1.3 ;
     border: 0.5vmin solid var(--secondary-color);
     width: 40vmin;
 
@@ -22,15 +22,11 @@
     
     &:hover::before {
         background-position: 100% 100%;
-        transform: scale(1.08, 1.03);
+        transform: scale(1.08, 1.05);
         border-radius: 25px;
       }
 
     &:hover {
-        > .app__card-content {
-            background-position: -10% 0%;
-        }
-        
         > .card-icon {
         color: white; 
       }   
@@ -61,30 +57,22 @@
 
   
   .app__card-content {
-    background-image: radial-gradient(
-      rgba(255, 255, 255, 0.2) 8%, 
-      transparent 8%
-    );
-    background-position: 0% 0%;
-    background-size: 5vmin 5vmin;
-    height: calc(125% - 10vmin);
     padding: 3vmin;
     position: relative;
     transition: background-position 350ms ease;
-    width: calc(125% - 10vmin);
-    z-index: 2;
+    z-index: 1;
   }
   
   .app__card-title,
-  .card-subtitle {
+  .app__card-subtitle {
     color: white;
-    font-family: "OctoberTamil";
     font-weight: 400;
     margin: 0px;
   }
   
   .app__card-title {
     font-size: 3vmin;
+    font-family: "OctoberTamil";
   }
   
   .card-subtitle {
@@ -100,5 +88,9 @@
     margin-left: 2.3vmin;
     position: absolute;
     transition: color 250ms ease;
-    z-index: 2;
+    z-index: 1;
+  }
+
+  .center {
+    text-align: center;
   }

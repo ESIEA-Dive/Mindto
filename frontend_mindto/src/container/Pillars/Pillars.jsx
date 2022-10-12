@@ -23,6 +23,9 @@ const abouts = [
 const Pillars = () => {
   return (
     <div className='app__wrapper app__flex'>
+      <h1 className='title-text center'>
+      Understand & choose the right pillars in order <br/> to become an <span>all around player</span>
+      </h1>
       <div className='app__card-position'>
       {abouts.map((about, index) => (
         <div className="app__card"
