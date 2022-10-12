@@ -3,6 +3,8 @@ import header_video from '../assets/header_video.mp4';
 import apple_store from '../assets/apple_store.png';
 import google_play from '../assets/google_play.png';
 import contact from '../assets/contact.jpg';
+import physical from '../assets/physical.jpg';
+import coach from '../assets/coach.jpg';
 
 const imgs = {
     logo,
@@ -10,6 +12,8 @@ const imgs = {
     apple_store,
     google_play,
     contact,
+    coach,
+    physical,
 };
 
 export default imgs; 
