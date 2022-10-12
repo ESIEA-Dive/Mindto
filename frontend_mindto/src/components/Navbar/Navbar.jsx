@@ -23,8 +23,8 @@ const Navbar = () => {
   return (
     
    <nav className={navbar ? 'app__navbar active' : 'app__navbar'}>
-    <div className='app__navbar-logo'>
-      <img src={images.logo} alt='logo'></img>
+    <div className={navbar ? 'app__navbar-logo active' : 'app__navbar-logo'}>
+      <img src={images.mindto_logo} alt='logo'/>
     </div>
 
       <ul className='app__navbar-links'>

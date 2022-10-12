@@ -12,9 +12,11 @@
 }
 
 .app__navbar.active {
+  padding: 0.7rem 2rem 0.7rem;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: 1000;
 }
 
 
@@ -24,14 +26,19 @@
     align-items: center;
    
     img {
-        width: 135px;
-        height: 55px;
-        padding-bottom: 8px;
+        height: 45px;
+        color: white;
 
         @media screen and (min-width: 2000px) {
-            width: 200px;
-            height: 80px;
+           height: 50px;
         }
+    }
+}
+
+.app__navbar-logo.active {
+    img {
+      height: 40px;
+      margin-right: 1.2rem;
     }
 }
 

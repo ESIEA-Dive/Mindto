@@ -31,6 +31,11 @@ video {
     @media screen and (max-width: 900px) {
         font-size: 0.9rem;
     }
+
+    @media screen and (max-width: 450px) {
+        font-size: 0.6rem;
+        line-height: 2rem;
+    }
 }
 
 .green {
