@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ClassCard from './ClassCard';
 import { AppWrap } from '../../wrapper';
 
@@ -16,13 +16,33 @@ import './Transformation.scss';
 import { Pagination, Navigation } from "swiper";
 
 const Transformation = () => {
+
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
+  function getWindowSize() {
+    const {innerWidth, innerHeight} = window;
+    return {innerWidth, innerHeight};
+  }
+
   return (
     <div className='fulldiv'>
       <div className='bottom-color'></div>
       <>
         <Swiper
-          slidesPerView={3}
-          slidesPerGroup={3}
+          slidesPerView={windowSize.innerWidth < 1600 ? windowSize.innerWidth < 1200 ? windowSize.innerWidth < 800 ? 1 : 2 : 3 : 4}
+          slidesPerGroup={windowSize.innerWidth < 1600 ? windowSize.innerWidth < 1200 ? windowSize.innerWidth < 800 ? 1 : 2 : 3 : 4}
           loop={true}
           loopFillGroupWithBlank={true}
           pagination={{

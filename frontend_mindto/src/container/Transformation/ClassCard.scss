@@ -1,6 +1,8 @@
 .card {
     height: auto;
-    width: 60vmin;
+    width: 10vw;
+    max-width: 600px;
+    min-width: 330px;
     border-radius: 15px;
     background-color: black;
     display: flex;
@@ -9,7 +11,7 @@
 }
 
 .coach {
-    width: 45%;
+    max-width: 30%;
     position: relative;
 }
 
@@ -46,7 +48,7 @@
 }
 
 .description {
-    width: 55%;
+    width: 70%;
     height: 100%;
     padding: 15px;
     .big-line {
