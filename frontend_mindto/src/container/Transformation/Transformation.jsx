@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ClassCard from './ClassCard';
+import ClassCardBis from './ClassCardBis';
 import { AppWrap } from '../../wrapper';
 
 // Import Swiper React components
@@ -58,9 +59,9 @@ const Transformation = () => {
           className="mySwiper"
         >
           <SwiperSlide><ClassCard /></SwiperSlide>
+          <SwiperSlide><ClassCardBis /></SwiperSlide>
           <SwiperSlide><ClassCard /></SwiperSlide>
-          <SwiperSlide><ClassCard /></SwiperSlide>
-          <SwiperSlide><ClassCard /></SwiperSlide>
+          <SwiperSlide><ClassCardBis /></SwiperSlide>
           <SwiperSlide><ClassCard /></SwiperSlide>
           <SwiperSlide><ClassCard /></SwiperSlide>
           <SwiperSlide><ClassCard /></SwiperSlide>

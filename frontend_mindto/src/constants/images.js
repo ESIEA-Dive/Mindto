@@ -10,6 +10,8 @@ import mindto_w from '../assets/mindto_wheel.svg';
 import mindto_s from '../assets/Mindto_solo.svg';
 import physical from '../assets/physical.jpg';
 import coach from '../assets/coach.jpg';
+import coach_bis from '../assets/coachbis.jpg';
+import mindto_logo_card from '../assets/mindto_logo_card.png';
 
 
 const imgs = {
@@ -24,6 +26,8 @@ const imgs = {
     mindto_logo,
     mindto_w,
     mindto_s,
+    mindto_logo_card,
+    coach_bis,
 };
 
 export default imgs; 

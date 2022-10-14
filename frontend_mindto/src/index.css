@@ -1,48 +1,45 @@
-
 @font-face {
-  font-family: GirlroyBold ;
-  src: url(./fonts/Gilroy-Bold.otf);
+    font-family: GilroyBold;
+    src: url(./fonts/Gilroy-Bold.otf);
 }
 
 @font-face {
-  font-family: GilroyLight;
-  src: url(./fonts/Gilroy-Light.otf);
+    font-family: GilroyLight;
+    src: url(./fonts/Gilroy-Light.otf);
 }
 
 @font-face {
-  font-family: GilroyMedium ;
-  src: url(./fonts/Gilroy-Medium.otf);
+    font-family: GilroyMedium;
+    src: url(./fonts/Gilroy-Medium.otf);
 }
 
 @font-face {
-  font-family: GilroyRegular ;
-  src: url(./fonts/Gilroy-Regular.otf);
+    font-family: GilroyRegular;
+    src: url(./fonts/Gilroy-Regular.otf);
 }
 
 @font-face {
-  font-family: OctoberTamil;
-  src: url(./fonts/OctoberTamil.ttc);
+    font-family: OctoberTamil;
+    src: url(./fonts/OctoberTamil.ttc);
 }
 
 :root {
-  --font-base: "OctoberTamil", sans-serif;
-
-  --g3: rgb(51, 102, 76);
-  --g2: rgb(46, 42, 43);
-  --g1: rgb(0, 198 , 116 );
-
-  --primary-color: #282828;
-  --secondary-color: #00C674;
-  --yellow-color: #FFE269;
-  --lightGray-color: #e4e4e4;
-  --gray-color: #6b7688;
-  --orange-color: #FFAB82;
-  --white-color: #F5F5F5;
+    --font-base: "OctoberTamil", sans-serif;
+    --g3: rgb(51, 102, 76);
+    --g2: rgb(46, 42, 43);
+    --g1: rgb(0, 198, 116);
+    --primary-color: #282828;
+    --secondary-color: #00C674;
+    --yellow-color: #FFE269;
+    --lightGray-color: #e4e4e4;
+    --gray-color: #6b7688;
+    --orange-color: #FFAB82;
+    --white-color: #F5F5F5;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  scroll-behavior: smooth;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
 }
