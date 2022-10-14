@@ -42,8 +42,8 @@ const Transformation = () => {
       <div className='bottom-color'></div>
       <>
         <Swiper
-          slidesPerView={windowSize.innerWidth < 1600 ? windowSize.innerWidth < 1200 ? windowSize.innerWidth < 800 ? 1 : 2 : 3 : 4}
-          slidesPerGroup={windowSize.innerWidth < 1600 ? windowSize.innerWidth < 1200 ? windowSize.innerWidth < 800 ? 1 : 2 : 3 : 4}
+          slidesPerView={windowSize.innerWidth < 1600 ? windowSize.innerWidth < 1200 ? windowSize.innerWidth < 1000 ? windowSize.innerWidth < 700 ? 1 : 2 : 3 : 4 : 5}
+          slidesPerGroup={windowSize.innerWidth < 1600 ? windowSize.innerWidth < 1200 ? windowSize.innerWidth < 1000 ? windowSize.innerWidth < 700 ? 1 : 2 : 3 : 4 : 5}
           loop={true}
           loopFillGroupWithBlank={true}
           pagination={{
@@ -51,22 +51,23 @@ const Transformation = () => {
           }}
           style={{
             "--swiper-pagination-color": "#00C674",
-            "--swiper-navigation-color": "#00C674",
+            "--swiper-navigation-background-color": "#00C674",
             "--swiper-pagination-bullet-inactive-color": "#FFFFFF",
           }}     
           navigation={true}
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
-          <SwiperSlide><ClassCard /></SwiperSlide>
           <SwiperSlide><ClassCardBis /></SwiperSlide>
-          <SwiperSlide><ClassCard /></SwiperSlide>
           <SwiperSlide><ClassCardBis /></SwiperSlide>
-          <SwiperSlide><ClassCard /></SwiperSlide>
-          <SwiperSlide><ClassCard /></SwiperSlide>
-          <SwiperSlide><ClassCard /></SwiperSlide>
-          <SwiperSlide><ClassCard /></SwiperSlide>
-          <SwiperSlide><ClassCard /></SwiperSlide>
+          <SwiperSlide><ClassCardBis /></SwiperSlide>
+          <SwiperSlide><ClassCardBis /></SwiperSlide>
+          <SwiperSlide><ClassCardBis /></SwiperSlide>
+          <SwiperSlide><ClassCardBis /></SwiperSlide>
+          <SwiperSlide><ClassCardBis /></SwiperSlide>
+          <SwiperSlide><ClassCardBis /></SwiperSlide>
+          <SwiperSlide><ClassCardBis /></SwiperSlide>
+          <SwiperSlide><ClassCardBis /></SwiperSlide>
         </Swiper>
       </>
     </div>
