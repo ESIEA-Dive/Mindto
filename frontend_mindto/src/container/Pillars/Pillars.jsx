@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 import { GiEcology,GiWallet, GiOilySpiral, GiWeightLiftingUp } from 'react-icons/gi';
 import { RiMentalHealthFill, RiTimeFill } from 'react-icons/ri';
@@ -23,20 +24,32 @@ const abouts = [
 const Pillars = () => {
   return (
     <div className='app__wrapper app__flex'>
-      <h1 className='title-text center'>
+      <motion.h1 
+      className='title-text center'
+      whileInView={{ opacity:[0,1] }}
+      transition={{ duration: 1 }}
+      >
       Understand & choose the right pillars in order <br/> to become an <span>all around player</span>
-      </h1>
+      </motion.h1>
       <div className='app__card-position'>
       {abouts.map((about, index) => (
-        <div className="app__card"
-        key= {index}>
-          <div className="app__card-content">
-            <h3 className="app__card-title">{about.title}</h3>
-            <h4 className="app__card-subtitle">{about.description}</h4>
-          </div>
+        <motion.div
+        whileInView={{ opacity: [0,1 ]}}
+        transition={{ duration: 1 }}
+        >
+          <motion.div className="app__card"
+          key={index}
+          whileInView={{ opacity:[0, 0, 1], x:[-40,-20, 0], y:[-40,-20, 0] }}
+          transition={{ duration: 1, delay: index * 0.1 }}
+          >
+            <div className="app__card-content">
+              <h3 className="app__card-title">{about.title}</h3>
+              <h4 className="app__card-subtitle">{about.description}</h4>
+            </div>
 
-          <i className="card-icon">{about.icon}</i>
-        </div>
+            <i className="card-icon">{about.icon}</i>
+          </motion.div>
+        </motion.div>
       ))};
 
       </div>
