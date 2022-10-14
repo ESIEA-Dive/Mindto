@@ -33,17 +33,22 @@ const Pillars = () => {
       </motion.h1>
       <div className='app__card-position'>
       {abouts.map((about, index) => (
-        <motion.div className="app__card"
-        key={index}
-        whileInView={{ opacity:[0, 0, 1], x:[-50, -25, 0], y:[-50, -25, 0] }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
+        <motion.div
+        whileInView={{ opacity: [0,1 ]}}
+        transition={{ duration: 1 }}
         >
-          <div className="app__card-content">
-            <h3 className="app__card-title">{about.title}</h3>
-            <h4 className="app__card-subtitle">{about.description}</h4>
-          </div>
+          <motion.div className="app__card"
+          key={index}
+          whileInView={{ opacity:[0, 0, 1], x:[-40,-20, 0], y:[-40,-20, 0] }}
+          transition={{ duration: 1, delay: index * 0.1 }}
+          >
+            <div className="app__card-content">
+              <h3 className="app__card-title">{about.title}</h3>
+              <h4 className="app__card-subtitle">{about.description}</h4>
+            </div>
 
-          <i className="card-icon">{about.icon}</i>
+            <i className="card-icon">{about.icon}</i>
+          </motion.div>
         </motion.div>
       ))};
 
