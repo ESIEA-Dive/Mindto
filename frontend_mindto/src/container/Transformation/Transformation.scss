@@ -9,10 +9,10 @@
     color: var(--white-color);
     .right {
         position: absolute;
-        width: 50px;
+        width: 8%;
         top: 0;
         bottom: 0;
-        background: var(--secondary-color);
+        background: linear-gradient(90deg, transparent 0%, rgba(0, 198, 116, 1) 50%, rgba(0, 198, 116, 1) 100%);
         opacity: 0.5;
         right: 0;
         z-index: 10;
