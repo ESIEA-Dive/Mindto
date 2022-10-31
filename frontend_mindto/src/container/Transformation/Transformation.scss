@@ -1,70 +1,45 @@
-.fulldiv {
+.classes-container {
     height: 100vh;
     width: 100%;
+    background-color: var(--secondary-color);
     position: relative;
     display: flex;
-}
-
-.bottom-color {
-    position: absolute;
-    background-color: black;
-    height: 50%;
-    width: 100%;
-    bottom: 0;
-}
-
-.swiper-button-next::after {
-    display: none;
-}
-
-.swiper-button-next {
-    background-color: var(--secondary-color);
-    border-radius: 100%;
-    padding: 25px;
-    background-image: url(../../assets/arrow-class.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: rotate(90deg);
-    background-size: cover;
-    border: none;
-}
-
-.swiper-button-next:hover {
-    background-color: var(--white-color);
-}
-
-.swiper-button-prev::after {
-    display: none;
-}
-
-.swiper-button-prev {
-    background-color: var(--secondary-color);
-    border-radius: 100%;
-    padding: 25px;
-    background-image: url(../../assets/arrow-class.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border: none;
-    transform: rotate(-90deg);
-}
-
-.swiper-button-prev:hover {
-    background-color: var(--white-color);
-}
-
-.swiper-slide {
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+    flex-direction: column;
+    color: var(--white-color);
+    .right {
+        position: absolute;
+        width: 50px;
+        top: 0;
+        bottom: 0;
+        background: var(--secondary-color);
+        opacity: 0.5;
+        right: 0;
+        z-index: 10;
+    }
+    .title {
+        font-family: "GilroyBold";
+        font-size: 2.4rem;
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    .description {
+        margin-top: 20px;
+        padding-right: 10%;
+        padding-left: 10%;
+        font-size: 1.4rem;
+        font-family: "GilroyRegular";
+    }
+    .carroussel {
+        margin-top: 50px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+    .mySwiper {
+        padding-left: 10%;
+    }
+    .mySwiperSlide {
+        margin-right: 50px;
+    }
 }

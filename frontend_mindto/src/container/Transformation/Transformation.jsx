@@ -1,27 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import ClassCard from './ClassCard';
-import ClassCardBis from './ClassCardBis';
 import { AppWrap } from '../../wrapper';
 
-// Import Swiper React components
+import './Transformation.scss';
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-import './Transformation.scss';
-
-// import required modules
-import { Pagination, Navigation } from "swiper";
 
 const Transformation = () => {
 
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
   useEffect(() => {
-    function handleWindowResize() {
+    function handleWindowResize(){
       setWindowSize(getWindowSize());
     }
 
@@ -32,44 +26,40 @@ const Transformation = () => {
     };
   }, []);
 
-  function getWindowSize() {
+  function getWindowSize(){
     const {innerWidth, innerHeight} = window;
     return {innerWidth, innerHeight};
   }
 
   return (
-    <div className='fulldiv'>
-      <div className='bottom-color'></div>
-      <>
+    <div className='classes-container'>
+      <div class="right"></div>
+      <p className='title'>
+        Soon...
+      </p>
+      <p className='description'>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <div className='carroussel'>
         <Swiper
-          slidesPerView={windowSize.innerWidth < 1600 ? windowSize.innerWidth < 1200 ? windowSize.innerWidth < 1000 ? windowSize.innerWidth < 700 ? 1 : 2 : 3 : 4 : 5}
-          slidesPerGroup={windowSize.innerWidth < 1600 ? windowSize.innerWidth < 1200 ? windowSize.innerWidth < 1000 ? windowSize.innerWidth < 700 ? 1 : 2 : 3 : 4 : 5}
-          loop={true}
-          loopFillGroupWithBlank={true}
-          pagination={{
-            clickable: true,
-          }}
-          style={{
-            "--swiper-pagination-color": "#00C674",
-            "--swiper-navigation-background-color": "#00C674",
-            "--swiper-pagination-bullet-inactive-color": "#FFFFFF",
-          }}     
-          navigation={true}
-          modules={[Pagination, Navigation]}
+          slidesPerView={Math.round(windowSize.innerWidth/320)}
           className="mySwiper"
         >
-          <SwiperSlide><ClassCardBis /></SwiperSlide>
-          <SwiperSlide><ClassCardBis /></SwiperSlide>
-          <SwiperSlide><ClassCardBis /></SwiperSlide>
-          <SwiperSlide><ClassCardBis /></SwiperSlide>
-          <SwiperSlide><ClassCardBis /></SwiperSlide>
-          <SwiperSlide><ClassCardBis /></SwiperSlide>
-          <SwiperSlide><ClassCardBis /></SwiperSlide>
-          <SwiperSlide><ClassCardBis /></SwiperSlide>
-          <SwiperSlide><ClassCardBis /></SwiperSlide>
-          <SwiperSlide><ClassCardBis /></SwiperSlide>
+          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
         </Swiper>
-      </>
+      </div>
     </div>
 
   );

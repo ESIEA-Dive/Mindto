@@ -1,217 +1,109 @@
+.card-class-container {
+     :hover {
+        cursor: pointer;
+    }
+}
+
 .card {
     height: auto;
-    width: 10vw;
-    max-width: 600px;
-    min-width: 330px;
-    border-radius: 15px;
-    background-color: black;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.coach {
-    max-width: 30%;
-    position: relative;
-}
-
-.picture {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 15vw;
+    max-width: 450px;
+    min-width: 250px;
     border-bottom-left-radius: 15px;
-    border-top-left-radius: 15px;
-}
-
-.date {
-    color: var(--white-color);
-    position: absolute;
-    bottom: 0;
-    left: 15px;
-    text-align: center;
-    margin-bottom: 40px;
-    background-color: black;
-    padding: 15px;
-    border-radius: 15px;
-    font-family: "GilroyLight";
-    .day {
-        font-family: "GilroyBold";
-    }
-}
-
-.name {
-    color: black;
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    font-family: "GilroyBold";
-}
-
-.description {
-    width: 70%;
-    height: 100%;
-    padding: 15px;
-    .big-line {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
-.line {
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    background-color: var(--lightGray-color);
     display: flex;
-    flex-direction: row;
-    justify-content: left;
-    .icon {
-        height: 20px;
-        width: 20px;
-        color: var(--white-color);
-    }
-    .icon-click:hover {
-        cursor: pointer;
-        color: var(--secondary-color);
-        transition: all 0.5s ease;
-    }
-    .notation {
-        color: var(--white-color);
-        margin-left: 5px;
-        margin-top: 4px;
-        font-family: "GilroyLight";
-        font-size: 0.8rem;
-    }
-    .column {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .title {
-            color: var(--white-color);
-            text-align: center;
-            font-family: "GilroyLight";
-            font-size: 0.8rem;
-        }
-        .cont {
-            color: var(--white-color);
-            background-color: var(--primary-color);
-            padding: 5px 12px;
-            margin-top: 5px;
-            border-radius: 8px;
-            font-family: "GilroyMedium";
-            font-size: 1rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            /* number of lines to show */
-            line-clamp: 1;
-            -webkit-box-orient: vertical;
-        }
-        .light {
-            background-color: var(--white-color);
-            color: black;
-            font-size: 0.8rem;
-        }
-    }
-    .column:not(:last-child) {
-        margin-right: 5px;
-    }
-}
-
-.gender {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--primary-color);
-    padding: 5px 12px;
-    margin-top: 5px;
-    border-radius: 8px;
-    .icon {
-        height: 1.2rem;
-        width: 1.2rem;
-    }
-    .man {
-        color: #FCCB00;
-    }
-    .woman {
-        color: var(--secondary-color);
-    }
-}
-
-.pillar-picture {
-    width: 60px;
-    height: 60px;
-    border-radius: 50px;
-    border: 6px solid black;
-    object-fit: cover;
-    margin-left: -40px;
     position: relative;
-}
-
-.pillar-text {
-    color: var(--white-color);
-    font-family: "GilroyMedium";
-    font-size: 1rem;
-    margin-left: 5px;
-    margin-top: 20px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    /* number of lines to show */
-    line-clamp: 1;
-    -webkit-box-orient: vertical;
-}
-
-.course-name {
-    color: var(--white-color);
-    font-family: "GilroyRegular";
-    font-size: 1rem;
-    margin-top: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    /* number of lines to show */
-    line-clamp: 1;
-    -webkit-box-orient: vertical;
-}
-
-.course-description {
-    color: var(--lightGray-color);
-    font-family: "GilroyLight";
-    font-size: 0.7rem;
-    margin-top: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    /* number of lines to show */
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
-}
-
-.align-right {
-    margin-left: auto;
-    margin-right: 0;
-}
-
-.margin-30top {
-    margin-top: 30px;
-}
-
-.btn-join {
-    padding: 10px 25px;
-    width: auto;
-    background-color: var(--secondary-color);
-    color: var(--white-color);
-    border-radius: 10px;
-    border: none;
-    font-family: "GilroyMedium";
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-
-.btn-join:hover {
-    background-color: var(--white-color);
-    color: var(--secondary-color);
-    cursor: pointer;
-    transition: all 0.5s ease;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    .coach {
+        max-height: 50%;
+        .picture {
+            height: 260px;
+            width: 100%;
+            border-bottom-left-radius: 100%;
+            border-bottom-right-radius: 100%;
+            border-top-left-radius: 35px;
+            border-top-right-radius: 35px;
+            object-fit: cover;
+        }
+        .type-class {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: "GilroyBold";
+            color: black;
+            font-size: 1rem;
+            padding: 10px;
+        }
+        .with-coach {
+            font-size: 0.7rem;
+            padding: 10px;
+            color: var(--primary-color);
+            font-family: "GilroyMedium";
+        }
+        .separation {
+            display: inline-block;
+            background-color: black;
+            height: 2px;
+            width: 50px;
+            margin-bottom: 12px;
+        }
+        .name {
+            font-family: "GilroyBold";
+            color: black;
+            font-size: 1rem;
+            margin-top: -10px;
+        }
+    }
+    .logo_background {
+        width: 100%;
+        height: auto;
+        background-color: var(--white-color);
+        position: relative;
+        z-index: 10;
+        .demi-background {
+            background-color: var(--lightGray-color);
+            height: 50%;
+            width: 100%;
+            position: absolute;
+            z-index: -10;
+        }
+        .logo {
+            height: 26px;
+            width: 26px;
+            margin: auto;
+            margin-top: 6px;
+            border-radius: 100%;
+            border: 1px solid var(--secondary-color);
+            background-color: var(--white-color);
+        }
+    }
+    .bottom {
+        background-color: var(--white-color);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 0 15px 10px 15px;
+        margin-top: -5px;
+        z-index: 10;
+        .date {
+            font-family: "GilroyRegular";
+            color: var(--primary-color);
+            font-size: 0.8rem;
+            margin-top: 2px;
+        }
+        .places-left {
+            font-family: "GilroyMedium";
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+    }
 }
