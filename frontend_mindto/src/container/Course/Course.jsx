@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ClassCard from './ClassCard';
 import { AppWrap } from '../../wrapper';
 
-import './Transformation.scss';
+import './Course.scss';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,26 +14,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper";
 
-const Transformation = () => {
-
-  const [windowSize, setWindowSize] = useState(getWindowSize());
-
-  useEffect(() => {
-    function handleWindowResize() {
-      setWindowSize(getWindowSize());
-    }
-
-    window.addEventListener('resize', handleWindowResize);
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, []);
-
-  function getWindowSize() {
-    const { innerWidth, innerHeight } = window;
-    return { innerWidth, innerHeight };
-  }
+const Course = () => {
 
   return (
     <div className='classes-container'>
@@ -88,4 +69,4 @@ const Transformation = () => {
   );
 };
 
-export default AppWrap(Transformation, 'transformation');
+export default AppWrap(Course, 'course');
