@@ -37,7 +37,7 @@
         }
     }
     .carroussel {
-        margin-top: 50px;
+        margin-top: 30px;
         display: flex;
         justify-content: flex-start;
         flex-direction: row;
@@ -47,5 +47,21 @@
     }
     .mySwiperSlide {
         margin-right: 50px;
+        margin-bottom: 50px;
+    }
+    .swiper-pagination {
+        margin-top: 50px;
+    }
+    .swiper-pagination-bullet {
+        border-radius: 100;
+        width: 10px;
+        height: 10px;
+        color: #000;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .swiper-pagination-bullet-active {
+        color: var(--white-color);
+        background: var(--white-color);
     }
 }
