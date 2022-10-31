@@ -11,6 +11,10 @@
         justify-content: center;
         color: var(--primary-color);
         font-family: "GilroyRegular";
+        font-size: 1rem;
+        @media only screen and (max-width: 900px) {
+            font-size: 0.7rem;
+        }
     }
     
     .footer-col {
@@ -20,6 +24,9 @@
             margin-top: 30px;
             img {
                 height: 45px;
+                @media only screen and (max-width: 900px) {
+                    height: 35px;
+                }
                 color: var(--secondary-color);
             }
         }
@@ -32,6 +39,10 @@
         margin-top: 30px;
         position: relative;
         font-family: "OctoberTamil";
+        @media only screen and (max-width: 900px) {
+            font-size: 1rem;
+            margin-top: 0px;
+        }
     }
     
     .footer-col .separation {
@@ -61,7 +72,10 @@
     .logo {
         width: 30px;
         height: 30px;
-        margin-top: 5px;
+        @media only screen and (max-width: 900px) {
+            width: 24px;
+            height: 24px;
+        }
     }
     
     // Newsletter
@@ -83,6 +97,10 @@
         font-family: "GilroyRegular";
         background-color: var(--white-color);
         color: var(--primary-color);
+        @media only screen and (max-width: 900px) {
+            font-size: 0.7rem;
+            padding: 10px;
+        }
     }
     
     input:focus {
@@ -100,6 +118,10 @@
         margin-top: 20px;
         margin-left: -40px;
         font-family: "GilroyBold";
+        @media only screen and (max-width: 900px) {
+            font-size: 0.7rem;
+            padding: 10px;
+        }
     }
     
     .btnsend:hover {
