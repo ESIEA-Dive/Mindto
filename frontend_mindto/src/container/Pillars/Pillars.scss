@@ -1,105 +1,136 @@
-.app__card-position {
+.pillars-container {
+    height: auto;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-}
-
-.app__card{
-    
-    aspect-ratio: 1.5 ;
-    border: 0.5vmin solid var(--secondary-color);
-    width: 40vmin;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     flex-direction: column;
-    position: relative;
-    margin: 1rem;
-    border-radius: 25px;
-    
-    &:hover::before {
-        background-position: 100% 100%;
-        transform: scale(1.08, 1.05);
-        border-radius: 25px;
-      }
+    color: var(--white-color);
 
-    &:hover {
-        > .card-icon {
-        color: white; 
-      }   
+    .pillars-title {
+        font-family: "GilroyBold";
+        font-size: 2.4rem;
+        margin-right: 10%;
+        margin-left: 10%;
     }
 
-    &::before {
-        background: linear-gradient(
-            130deg, 
-            transparent 0% 33%, 
-            var(--g1) 66%, 
-            var(--g3) 83.5%, 
-            var(--g2) 100%
-          );
-        background-position: 0% 0%;
-        background-size: 300% 300%;
-        content: "";
-        height: 100%;
-        left: 0px;
-        pointer-events: none;
-        position: absolute;
-        top: 0px;
-        transition: background-position 350ms ease, transform 350ms ease;
-        width: 100%;
-        z-index: 1;
-        border-radius: 25px;
+    .pillars-description {
+        margin-top: 20px;
+        margin-right: 10%;
+        margin-left: 10%;
+        font-size: 1.4rem;
+        font-family: "GilroyRegular";
     }
-    
-    @media screen and (max-width: 1440px) {
-      width: 33vmin;
-  }  
+
+    .pillars-content {
+        margin-top: 20px;
+        margin-right: 10%;
+        margin-left: 10%;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+
+        .intellectual {
+            background-color: rgba(96, 167, 216, 255);
+        }
+
+        .environmental {
+            background-color: rgba(65, 176, 135, 255);
+        }
+
+        .financial {
+            background-color: rgba(228, 113, 23, 255);
+        }
+
+        .spiritual {
+            background-color: rgba(236, 232, 225, 255);
+        }
+
+        .physical {
+            background-color: rgba(223, 85, 65, 255);
+        }
+
+        .social {
+            background-color: rgba(228, 131, 143, 255);
+        }
+
+        .occupational {
+            background-color: rgba(236, 192, 85, 255);
+        }
+
+        .pillars-content-left {
+            width: 40%;
+            height: auto;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 5px solid var(--white-color);
+            border-radius: 30px;
+
+            .pillars-content-left-column {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 30%;
+                margin-right: 30%;
+                width: auto;
+                height: auto;
+
+                :not(:first-child) {
+                    margin-top: 15px;
+                }
+
+                .pillars-content-left-row {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: left;
+
+                    .pillars-content-left-circle {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 90px;
+                    }
+
+                    .pillars-content-left-pillar {
+                        margin-top: 7px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        .pillars-content-right {
+            width: 65%;
+            height: auto;
+            margin-left: -5%;
+
+            .pillars-content-right-box {
+                width: 100%;
+                height: 100%;
+                border-radius: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-inline: 20%;
+
+                .pillars-logo {
+                    width: 80px;
+                    height: 80px;
+                    color: var(--primary-color);
+                }
+                .pillars-intellectual-description {
+                    margin-top: 20px;
+                    text-align: center;
+                    font-size: 1rem;
+                    font-family: "GilroyRegular";
+                    color: var(--primary-color);
+
+                }
+            }
+        }
+    }
+
+
 }
-
-  
-  .app__card-content {
-    padding: 3vmin;
-    position: relative;
-    transition: background-position 350ms ease;
-    z-index: 1;
-  }
-  
-  .app__card-title,
-  .app__card-subtitle {
-    color: white;
-    font-weight: 400;
-    margin: 0px;
-  }
-  
-  .app__card-title {
-    font-size: 3vmin;
-    font-family: "OctoberTamil";
-  }
-  
-  .card-subtitle {
-    font-size: 3vmin;
-    margin-top: 2vmin;
-  }
-  
-  .card-icon {
-    bottom: 0px;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 9vmin;
-    left: 0px;
-    margin-left: 2.3vmin;
-    position: absolute;
-    transition: color 250ms ease;
-    z-index: 1;
-    
-    @media screen and (max-width: 1440px) {
-      font-size: 6vmin;
-  }  
-  }
-
-  .center {
-    text-align: center;
-    margin-top: 2rem;
-  }

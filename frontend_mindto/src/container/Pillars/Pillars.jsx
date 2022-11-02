@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 import { GiEcology,GiWallet, GiOilySpiral, GiWeightLiftingUp } from 'react-icons/gi';
 import { RiMentalHealthFill, RiTimeFill } from 'react-icons/ri';
@@ -10,51 +9,56 @@ import { AppWrap } from '../../wrapper';
 
 import './Pillars.scss';
 
-const abouts = [
-    { title: 'Intellectual', description: 'I am a good webDev', icon: <HiLightBulb/> },
-    { title: 'Emotional', description: 'I am a good webDev', icon: <RiMentalHealthFill/> },
-    { title: 'Environmental', description: 'I am a good webDev', icon: <GiEcology/> },
-    { title: 'Financial', description: 'I am a good webDev', icon: <GiWallet/> },
-    { title: 'Spiritual', description: 'I am a good webDev', icon: < GiOilySpiral/> },
-    { title: 'Physical', description: 'I am a good webDev', icon: <GiWeightLiftingUp/> },
-    { title: 'Social', description: 'I am a good webDev', icon: <FaUserFriends/>  },
-    { title: 'Occupational', description: 'I am a good webDev', icon: <RiTimeFill/>  }
-];
-
 const Pillars = () => {
   return (
-    <div className='app__wrapper app__flex'>
-      <motion.h1 
-      className='title-text center'
-      whileInView={{ opacity:[0,1] }}
-      transition={{ duration: 1 }}
-      >
-      Understand & choose the right pillars in order <br/> to become an <span>all around player</span>
-      </motion.h1>
-      <div className='app__card-position'>
-      {abouts.map((about, index) => (
-        <motion.div
-        whileInView={{ opacity: [0,1 ]}}
-        transition={{ duration: 1 }}
-        >
-          <motion.div className="app__card"
-          key={index}
-          whileInView={{ opacity:[0, 0, 1], x:[-40,-20, 0], y:[-40,-20, 0] }}
-          transition={{ duration: 1, delay: index * 0.1 }}
-          >
-            <div className="app__card-content">
-              <h3 className="app__card-title">{about.title}</h3>
-              <h4 className="app__card-subtitle">{about.description}</h4>
+    <div className='pillars-container'>
+        <p className='pillars-title'>The Pillars</p>
+        <p className='pillars-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet vehicula elit a accumsan. 
+            Duis at urna ut quam auctor pharetra quis nec tortor. Nunc non eros ut sem aliquet aliquam ac nec magna.</p>
+        <div className='pillars-content'>
+          <div className='pillars-content-left'>
+            <div className='pillars-content-left-column'>
+              <div className='pillars-content-left-row'>
+                <div className='pillars-content-left-circle intellectual'></div>
+                <p className='pillars-content-left-pillar'>Intellectual</p>
+              </div>
+              <div className='pillars-content-left-row'>
+                <div className='pillars-content-left-circle environmental'></div>
+                <p className='pillars-content-left-pillar'>Environmental</p>
+              </div>
+              <div className='pillars-content-left-row'>
+                <div className='pillars-content-left-circle financial'></div>
+                <p className='pillars-content-left-pillar'>Financial</p>
+              </div> 
+              <div className='pillars-content-left-row'>
+                <div className='pillars-content-left-circle spiritual'></div>
+                <p className='pillars-content-left-pillar'>Spiritual</p>
+              </div> 
+              <div className='pillars-content-left-row'>
+                <div className='pillars-content-left-circle physical'></div>
+                <p className='pillars-content-left-pillar'>Physical</p>
+              </div>  
+              <div className='pillars-content-left-row'>
+                <div className='pillars-content-left-circle social'></div>
+                <p className='pillars-content-left-pillar'>Social</p>
+              </div>  
+              <div className='pillars-content-left-row'>
+                <div className='pillars-content-left-circle occupational'></div>
+                <p className='pillars-content-left-pillar'>Occupational</p>
+              </div>  
             </div>
-
-            <i className="card-icon">{about.icon}</i>
-          </motion.div>
-        </motion.div>
-      ))};
-
-      </div>
+          </div>
+          <div className='pillars-content-right'>
+            <div className='pillars-content-right-box intellectual'>
+              <HiLightBulb className='pillars-logo'/>
+              <p className='pillars-intellectual-description'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet vehicula elit a accumsan. 
+            Duis at urna ut quam auctor pharetra quis nec tortor. Nunc non eros ut sem aliquet aliquam ac nec magna.</p>
+            </div>
+          </div>
+        </div>
     </div>
   );
 };
 
-export default AppWrap(Pillars,'pillars');
+export default AppWrap(Pillars, 'pillars');
