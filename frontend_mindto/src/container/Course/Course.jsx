@@ -28,7 +28,7 @@ const Course = () => {
       <div className='carroussel'>
         <Swiper
           slidesPerView={1}
-          spaceBetween={10}
+          spaceBetween={100}
           pagination={{
             clickable: true,
           }}
