@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { AppWrap } from '../../wrapper';
+import images from '../../constants/images';
 
 import './Team.scss';
 
@@ -12,31 +13,37 @@ const Team = () => {
       </p>
       <div className='team-group'>
         <div className='team-person'>
-          <div className='person-picture'></div>
+          <div className='person-picture'>
+            <img className='person-picture-img' src={images.coach_bis} alt='member'></img>
+          </div>
           <div className='person-bio'>
-            <p>Guillaume Dive</p>
-            <p>Founder</p>
+            <p className='person-name'>Guillaume Dive</p>
+            <p className='person-status'>Founder</p>
           </div>
         </div>
         <div className='team-person'>
-          <div className='person-picture'></div>
-          <div className='person-bio'>
-            <p>Guillaume Dive</p>
-            <p>Founder</p>
+          <div className='person-picture'>
+            <img className='person-picture-img' src={images.coach_bis} alt='member'></img>
           </div>
-        </div>
-        <div className='team-person'>
-          <div className='person-picture'></div>
           <div className='person-bio'>
-            <p>Guillaume Dive</p>
-            <p>Founder</p>
+            <p className='person-name'>Guillaume Dive</p>
+            <p className='person-status'>Founder</p>
           </div>
-        </div>
-        <div className='team-person'>
-          <div className='person-picture'></div>
+        </div><div className='team-person'>
+          <div className='person-picture'>
+            <img className='person-picture-img' src={images.coach_bis} alt='member'></img>
+          </div>
           <div className='person-bio'>
-            <p>Guillaume Dive</p>
-            <p>Founder</p>
+            <p className='person-name'>Guillaume Dive</p>
+            <p className='person-status'>Founder</p>
+          </div>
+        </div><div className='team-person'>
+          <div className='person-picture'>
+            <img className='person-picture-img' src={images.coach_bis} alt='member'></img>
+          </div>
+          <div className='person-bio'>
+            <p className='person-name'>Guillaume Dive</p>
+            <p className='person-status'>Founder</p>
           </div>
         </div>
       </div>
