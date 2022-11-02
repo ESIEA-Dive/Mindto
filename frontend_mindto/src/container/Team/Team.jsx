@@ -14,7 +14,7 @@ const Team = () => {
       <div className='team-group'>
         <div className='team-person'>
           <div className='person-picture'>
-            <img className='person-picture-img' src={images.coach_bis} alt='member'></img>
+            <img className='person-picture-img' src={images.member} alt='member'></img>
           </div>
           <div className='person-bio'>
             <p className='person-name'>Guillaume Dive</p>
@@ -23,7 +23,7 @@ const Team = () => {
         </div>
         <div className='team-person'>
           <div className='person-picture'>
-            <img className='person-picture-img' src={images.coach_bis} alt='member'></img>
+            <img className='person-picture-img' src={images.member} alt='member'></img>
           </div>
           <div className='person-bio'>
             <p className='person-name'>Guillaume Dive</p>
@@ -31,7 +31,7 @@ const Team = () => {
           </div>
         </div><div className='team-person'>
           <div className='person-picture'>
-            <img className='person-picture-img' src={images.coach_bis} alt='member'></img>
+            <img className='person-picture-img' src={images.member} alt='member'></img>
           </div>
           <div className='person-bio'>
             <p className='person-name'>Guillaume Dive</p>
@@ -39,7 +39,7 @@ const Team = () => {
           </div>
         </div><div className='team-person'>
           <div className='person-picture'>
-            <img className='person-picture-img' src={images.coach_bis} alt='member'></img>
+            <img className='person-picture-img' src={images.member} alt='member'></img>
           </div>
           <div className='person-bio'>
             <p className='person-name'>Guillaume Dive</p>

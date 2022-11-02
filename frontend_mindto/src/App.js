@@ -2,7 +2,7 @@ import React from 'react';
 //ass plus tard , { useState, useEffect }
 import { motion } from 'framer-motion';
 
-import { Contact, Footer, Header, Pillars, Purpose, Team, Course } from './container';
+import { Contact, Footer, Header, Pillars, Testimonial, Team, Course } from './container';
 import { Navbar } from './components';
 
 import './App.scss';
@@ -65,9 +65,9 @@ const App = () => {
         <> */}
           <Navbar />
           <Header />
-          <Purpose />
           <Pillars />
           <Course />
+          <Testimonial />
           <Team />
           <Contact />
           <Footer />

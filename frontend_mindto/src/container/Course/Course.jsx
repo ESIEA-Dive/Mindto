@@ -28,7 +28,7 @@ const Course = () => {
       <div className='carroussel'>
         <Swiper
           slidesPerView={1}
-          spaceBetween={100}
+          spaceBetween={30}
           pagination={{
             clickable: true,
           }}
@@ -47,21 +47,21 @@ const Course = () => {
             },
           }}
           modules={[Pagination]}
-          className="mySwiper"
+          className="swiper-carroussel"
         >
-          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="mySwiperSlide"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
+          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
         </Swiper>
       </div>
     </div>

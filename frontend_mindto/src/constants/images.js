@@ -13,6 +13,7 @@ import physical from '../assets/physical.jpg';
 import coach from '../assets/coach.jpg';
 import coach_bis from '../assets/coachbis.jpg';
 import mindto_logo_card from '../assets/mindto_logo_card.png';
+import member from '../assets/member.jpg';
 
 
 const imgs = {
@@ -30,6 +31,7 @@ const imgs = {
     mindto_s,
     mindto_logo_card,
     coach_bis,
+    member,
 };
 
 export default imgs; 

@@ -1,5 +1,5 @@
 export { default as Contact } from './Contact/Contact';
-export { default as Purpose } from './Purpose/Purpose';
+export { default as Testimonial } from './Testimonial/Testimonial';
 export { default as Pillars } from './Pillars/Pillars';
 export { default as Team } from './Team/Team';
 export { default as Course } from './Course/Course';
