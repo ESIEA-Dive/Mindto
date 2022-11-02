@@ -29,19 +29,24 @@ const Course = () => {
         <Swiper
           slidesPerView={1}
           spaceBetween={30}
+          slidesOffsetAfter={50}
           pagination={{
             clickable: true,
           }}
           breakpoints={{
-            640: {
+            520: {
               slidesPerView: 2,
-              spaceBetween: 20,
+              spaceBetween: 30,
             },
-            768: {
-              slidesPerView: 4,
+            800: {
+              slidesPerView: 3,
               spaceBetween: 40,
             },
-            1024: {
+            1080: {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
+            1360: {
               slidesPerView: 5,
               spaceBetween: 50,
             },
