@@ -35,6 +35,9 @@
         display: flex;
         justify-content: space-evenly;
         flex-direction: row;
+        @media only screen and (max-width: 900px) {
+            margin-top: 10px;
+        }
     }
     .class-description {
         display: flex;
@@ -42,6 +45,11 @@
         flex-direction: row;
         margin-inline: 12%;
         margin-top: 30px;
+        @media only screen and (max-width: 900px) {
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 10px;
+        }
         .class-description-type {
             border-radius: 15px;
             color: var(--primary-color);
@@ -52,8 +60,9 @@
             height: 60px;
             @media only screen and (max-width: 900px) {
                 font-size: 0.8rem;
-                padding: 5px;
+                padding: 5px 10px;
                 height: 25px;
+                margin-inline: auto;
             }
         }
         .class-description-text {
@@ -63,6 +72,7 @@
             font-family: "GilroyRegular";
             @media only screen and (max-width: 900px) {
                 font-size: 0.7rem;
+                margin-top: 10px;
             }
         }
         .other {
