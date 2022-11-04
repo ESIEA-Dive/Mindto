@@ -65,29 +65,26 @@ const Course = () => {
 
   return (
     <div className='classes-container'>
-      <p className='title'>
+      <motion.p
+        className='title'
+        whileInView={{ opacity: [0, 1], x: [-20, 0], y: [-20, 0], transition: { duration: 0.5 } }}
+      >
         Classes
-      </p>
-      <p className='description'>
+      </motion.p>
+      <motion.p
+        className='description'
+        whileInView={{ opacity: [0, 1], x: [-20, 0], y: [-20, 0], transition: { duration: 0.5 } }}
+      >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
+      </motion.p>
       <div className='carroussel'>
         {cards.map((card, index) => (
           <motion.div
-            initial={{
-              scale: 1,
-              opacity: 1
-            }}
-            animate={
-              status == index ? {
-                opacity: 1,
-                scale: 1,
-                transition: { duration: 0.5 }
-              } : {
-                opacity: 0.6,
-                scale: 0.9,
-                transition: { duration: 0.5 }
-              }
+            whileInView={
+              status == index ?
+                { opacity: [0.6, 1], scale: [0.9, 1], transition: { duration: 0.5 } }
+                :
+                { opacity: [1, 0.6], scale: [1, 0.9], transition: { duration: 0.5 } }
             }
             onClick={() => setStatus(index)}
             onHoverStart={() => setStatus(index)}
@@ -97,32 +94,22 @@ const Course = () => {
       </div>
       {texts.map((text, index) => (
         <motion.div
-          initial={{
-            x: -500,
-            opacity: 0.5
-          }}
-          animate={
-            status == index ? {
-              opacity: 1,
-              x: 0,
-              transition: { duration: 1 }
-            } : {
-              opacity: 0.5,
-              x: -500,
-              transition: { duration: 1 }
-            }
+          whileInView={
+            status == index ?
+              { opacity: [0.6, 1], x: [-500, 0], transition: { duration: 0.8 } }
+              :
+              { opacity: [1, 0.5], x: [0, -500], transition: { duration: 0.8 } }
           }
           onClick={() => setStatus(index)}
           onHoverStart={() => setStatus(index)}
+          className='class-description'
         >
-          <div className='class-description'>
-            {status == index && <div className={`class-description-type ${text.type}`}>
-              {text.title}
-            </div>}
-            {status == index && <p className='class-description-text'>
-              {text.description}
-            </p>}
-          </div>
+          {status == index && <div className={`class-description-type ${text.type}`}>
+            {text.title}
+          </div>}
+          {status == index && <p className='class-description-text'>
+            {text.description}
+          </p>}
         </motion.div>))}
     </div>
   );
