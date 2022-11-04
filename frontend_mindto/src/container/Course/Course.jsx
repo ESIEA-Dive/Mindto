@@ -31,7 +31,10 @@ const Course = () => {
             opacity: 1,
             transition: { duration: 0.5 },
           }}
-          whileTap={{ scale: 1 }}
+          whileTap={{
+            scale: 1,
+            opacity: 1
+          }}
           whileInView={{ opacity: 0.6 }}
           onClick={() => setStatus(0)}
           onHoverStart={() => setStatus(0)}
@@ -56,7 +59,10 @@ const Course = () => {
             opacity: 1,
             transition: { duration: 0.5 },
           }}
-          whileTap={{ scale: 1 }}
+          whileTap={{
+            scale: 1,
+            opacity: 1
+          }}
           whileInView={{ opacity: 0.6 }}
           onClick={() => setStatus(1)}
           onHoverStart={() => setStatus(1)}
@@ -80,7 +86,10 @@ const Course = () => {
             opacity: 1,
             transition: { duration: 0.5 },
           }}
-          whileTap={{ scale: 1 }}
+          whileTap={{
+            scale: 1,
+            opacity: 1
+          }}
           whileInView={{ opacity: 0.6 }}
           onClick={() => setStatus(2)}
           onHoverStart={() => setStatus(2)}
