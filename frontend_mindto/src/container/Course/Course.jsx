@@ -88,6 +88,7 @@ const Course = () => {
             }
             onClick={() => setStatus(index)}
             onHoverStart={() => setStatus(index)}
+            key={index}
           >
             {card.class}
           </motion.div>))}
@@ -96,13 +97,14 @@ const Course = () => {
         <motion.div
           whileInView={
             status == index ?
-              { opacity: [0.6, 1], x: [-500, 0], transition: { duration: 0.8 } }
+              { opacity: [0, 1], x: [-60, 0], transition: { duration: 0.8 } }
               :
-              { opacity: [1, 0.5], x: [0, -500], transition: { duration: 0.8 } }
+              { opacity: [1, 0], x: [0, -60], transition: { duration: 0.8 } }
           }
           onClick={() => setStatus(index)}
           onHoverStart={() => setStatus(index)}
           className='class-description'
+          key={index}
         >
           {status == index && <div className={`class-description-type ${text.type}`}>
             {text.title}
