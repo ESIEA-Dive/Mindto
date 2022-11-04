@@ -23,19 +23,19 @@ const Course = () => {
       <div className='carroussel'>
         <motion.div
           initial={{
-            opacity: 0.6,
-            scale: 0.9,
-          }}
-          whileHover={{
-            scale: 1,
-            opacity: 1,
-            transition: { duration: 0.5 },
-          }}
-          whileTap={{
             scale: 1,
             opacity: 1
           }}
-          whileInView={{ opacity: 0.6 }}
+          animate={
+            status == 0 ? {
+              opacity: 1,
+              scale: 1,
+              transition: { duration: 0.5 }
+            } : {
+              opacity: 0.6,
+              scale: 0.9,
+            }
+          }
           onClick={() => setStatus(0)}
           onHoverStart={() => setStatus(0)}
         >
@@ -54,16 +54,16 @@ const Course = () => {
             opacity: 0.6,
             scale: 0.9,
           }}
-          whileHover={{
-            scale: 1,
-            opacity: 1,
-            transition: { duration: 0.5 },
-          }}
-          whileTap={{
-            scale: 1,
-            opacity: 1
-          }}
-          whileInView={{ opacity: 0.6 }}
+          animate={
+            status == 1 ? {
+              opacity: 1,
+              scale: 1,
+              transition: { duration: 0.5 }
+            } : {
+              opacity: 0.6,
+              scale: 0.9,
+            }
+          }
           onClick={() => setStatus(1)}
           onHoverStart={() => setStatus(1)}
         >
@@ -81,16 +81,16 @@ const Course = () => {
             opacity: 0.6,
             scale: 0.9,
           }}
-          whileHover={{
-            scale: 1,
-            opacity: 1,
-            transition: { duration: 0.5 },
-          }}
-          whileTap={{
-            scale: 1,
-            opacity: 1
-          }}
-          whileInView={{ opacity: 0.6 }}
+          animate={
+            status == 2 ? {
+              opacity: 1,
+              scale: 1,
+              transition: { duration: 0.5 }
+            } : {
+              opacity: 0.6,
+              scale: 0.9,
+            }
+          }
           onClick={() => setStatus(2)}
           onHoverStart={() => setStatus(2)}
         >
