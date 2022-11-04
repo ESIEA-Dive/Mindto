@@ -1,73 +1,121 @@
-import React from 'react';
-import ClassCard from './ClassCard';
+import React, { useState } from 'react';
+import OtherClassCard from './OtherClassCard';
+import StudentClassCard from './StudentClassCard';
+import TeacherClassCard from './TeacherClassCard';
 import { AppWrap } from '../../wrapper';
 
 import './Course.scss';
-
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
-// import required modules
-import { Pagination } from "swiper";
+import images from '../../constants/images';
+import { motion } from "framer-motion"
 
 const Course = () => {
 
+  const [status, setStatus] = useState(0);
+
   return (
     <div className='classes-container'>
-      <div class="right"></div>
       <p className='title'>
-        Soon...
+        Classes
       </p>
       <p className='description'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
       <div className='carroussel'>
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={30}
-          slidesOffsetAfter={50}
-          pagination={{
-            clickable: true,
+        <motion.div
+          initial={{
+            opacity: 0.6,
+            scale: 0.9,
           }}
-          breakpoints={{
-            520: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-            },
-            800: {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
-            1080: {
-              slidesPerView: 4,
-              spaceBetween: 50,
-            },
-            1360: {
-              slidesPerView: 5,
-              spaceBetween: 50,
-            },
+          whileHover={{
+            scale: 1,
+            opacity: 1,
+            transition: { duration: 0.5 },
           }}
-          modules={[Pagination]}
-          className="swiper-carroussel"
+          whileTap={{ scale: 1 }}
+          whileInView={{ opacity: 0.6 }}
+          onClick={() => setStatus(0)}
+          onHoverStart={() => setStatus(0)}
         >
-          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
-          <SwiperSlide className="swiper-slide-carroussel"><ClassCard /></SwiperSlide>
-        </Swiper>
+          <OtherClassCard
+            coach_name="Bruce Woll"
+            title="Sport methods"
+            date="11 NOV"
+            places_left="14"
+            image={images.coach_one}
+            coach_status="CASTER"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{
+            opacity: 0.6,
+            scale: 0.9,
+          }}
+          whileHover={{
+            scale: 1,
+            opacity: 1,
+            transition: { duration: 0.5 },
+          }}
+          whileTap={{ scale: 1 }}
+          whileInView={{ opacity: 0.6 }}
+          onClick={() => setStatus(1)}
+          onHoverStart={() => setStatus(1)}
+        >
+          <StudentClassCard
+            coach_name="Peter Bale"
+            title="Mental health"
+            date="17 NOV"
+            places_left="22"
+            image={images.coach_two}
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{
+            opacity: 0.6,
+            scale: 0.9,
+          }}
+          whileHover={{
+            scale: 1,
+            opacity: 1,
+            transition: { duration: 0.5 },
+          }}
+          whileTap={{ scale: 1 }}
+          whileInView={{ opacity: 0.6 }}
+          onClick={() => setStatus(2)}
+          onHoverStart={() => setStatus(2)}
+        >
+          <TeacherClassCard
+            coach_name="Liz Kayne"
+            title="Meditation methods"
+            date="9 NOV"
+            places_left="8"
+            image={images.coach_three}
+          />
+        </motion.div>
+      </div>
+      <div className='class-description'>
+        {status == 0 && <div className='class-description-type other'>
+          PERSONALITY
+        </div>}
+        {status == 0 && <p className='class-description-text'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>}
+        {status == 1 && <div className='class-description-type student'>
+          STUDENT
+        </div>}
+        {status == 1 && <p className='class-description-text'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>}
+        {status == 2 && <div className='class-description-type teacher'>
+          TEACHER
+        </div>}
+        {status == 2 && <p className='class-description-text'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>}
       </div>
     </div>
 

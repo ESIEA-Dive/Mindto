@@ -6,19 +6,24 @@
 
 .card {
     height: auto;
-    width: 15vw;
+    width: 14vw;
     max-width: 450px;
     min-width: 250px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
-    background-color: var(--lightGray-color);
+    background-color: var(--primary-color);
     display: flex;
     position: relative;
     flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
+    @media only screen and (max-width: 900px) {
+        width: 25vw;
+        max-width: 300px;
+        min-width: 100px;
+    }
     .coach {
         max-height: 50%;
         .picture {
@@ -32,43 +37,66 @@
         }
         .type-class {
             position: absolute;
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
             font-family: "GilroyBold";
-            color: black;
-            font-size: 1rem;
+            font-size: 0.9rem;
             padding: 10px;
+            padding: 5px;
+            border-radius: 10px;
+            top: -10px;
+            margin-left: 10px;
+            @media only screen and (max-width: 900px) {
+                font-size: 0.7rem;
+            }
+        }
+        .other {
+            background-color: var(--yellow-color);
+            color: black;
+        }
+        .student {
+            background-color: var(--secondary-color);
+            color: black;
+        }
+        .teacher {
+            background-color: var(--orange-color);
+            color: black;
         }
         .with-coach {
             font-size: 0.7rem;
             padding: 10px;
-            color: var(--primary-color);
-            font-family: "GilroyMedium";
+            color: var(--white-color);
+            font-family: "GilroyLight";
+            @media only screen and (max-width: 900px) {
+                font-size: 0.6rem;
+            }
         }
         .separation {
             display: inline-block;
-            background-color: black;
-            height: 2px;
+            background-color: white;
+            height: 1px;
             width: 50px;
-            margin-bottom: 12px;
+            margin-bottom: 7px;
+            @media only screen and (max-width: 900px) {
+                width: 30px;
+            }
         }
         .name {
-            font-family: "GilroyBold";
-            color: black;
+            font-family: "GilroyMedium";
+            color: white;
             font-size: 1rem;
-            margin-top: -10px;
+            @media only screen and (max-width: 900px) {
+                font-size: 0.8rem;
+            }
         }
     }
     .logo_background {
         width: 100%;
         height: auto;
-        background-color: var(--white-color);
+        background-color: black;
         position: relative;
         z-index: 10;
+        margin-top: 6px;
         .demi-background {
-            background-color: var(--lightGray-color);
+            background-color: var(--primary-color);
             height: 50%;
             width: 100%;
             position: absolute;
@@ -80,12 +108,20 @@
             margin: auto;
             margin-top: 6px;
             border-radius: 100%;
+            background-color: black;
+        }
+        .other {
+            border: 1px solid var(--yellow-color);
+        }
+        .teacher {
+            border: 1px solid var(--orange-color);
+        }
+        .student {
             border: 1px solid var(--secondary-color);
-            background-color: var(--white-color);
         }
     }
     .bottom {
-        background-color: var(--white-color);
+        background-color: black;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         display: flex;
@@ -95,15 +131,29 @@
         margin-top: -5px;
         z-index: 10;
         .date {
-            font-family: "GilroyRegular";
-            color: var(--primary-color);
-            font-size: 0.8rem;
-            margin-top: 2px;
+            font-family: "GilroyMedium";
+            color: var(--white-color);
+            font-size: 0.9rem;
+            @media only screen and (max-width: 900px) {
+                font-size: 0.6rem;
+            }
         }
         .places-left {
             font-family: "GilroyMedium";
             color: var(--secondary-color);
             font-size: 0.9rem;
+            @media only screen and (max-width: 900px) {
+                font-size: 0.6rem;
+            }
+        }
+        .other {
+            color: var(--yellow-color);
+        }
+        .teacher {
+            color: var(--orange-color);
+        }
+        .student {
+            color: var(--secondary-color);
         }
     }
 }
