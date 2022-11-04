@@ -10,7 +10,58 @@ import { motion } from "framer-motion"
 
 const Course = () => {
 
-  const [status, setStatus] = useState(0);
+  const [status, setStatus] = useState(1);
+  const cards = [
+    {
+      class: <OtherClassCard
+        coach_name="Bruce Woll"
+        title="Sport methods"
+        date="11 NOV"
+        places_left="14"
+        image={images.coach_one}
+        coach_status="CASTER"
+      />
+    },
+    {
+      class: <StudentClassCard
+        coach_name="Peter Bale"
+        title="Mental health"
+        date="17 NOV"
+        places_left="22"
+        image={images.coach_two}
+      />
+    },
+    {
+      class: <TeacherClassCard
+        coach_name="Liz Kayne"
+        title="Meditation methods"
+        date="9 NOV"
+        places_left="8"
+        image={images.coach_three}
+      />
+    },
+  ];
+
+  const texts = [
+    {
+      title: "PERSONALITY",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      type: "other",
+    },
+    {
+      title: "STUDENT",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      type: "student",
+    },
+    {
+      title: "TEACHER",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      type: "teacher",
+    },
+  ];
 
   return (
     <div className='classes-container'>
@@ -21,113 +72,59 @@ const Course = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
       <div className='carroussel'>
-        <motion.div
-          initial={{
-            scale: 1,
-            opacity: 1
-          }}
-          animate={
-            status == 0 ? {
-              opacity: 1,
+        {cards.map((card, index) => (
+          <motion.div
+            initial={{
               scale: 1,
-              transition: { duration: 0.5 }
-            } : {
-              opacity: 0.6,
-              scale: 0.9,
+              opacity: 1
+            }}
+            animate={
+              status == index ? {
+                opacity: 1,
+                scale: 1,
+                transition: { duration: 0.5 }
+              } : {
+                opacity: 0.6,
+                scale: 0.9,
+                transition: { duration: 0.5 }
+              }
             }
-          }
-          onClick={() => setStatus(0)}
-          onHoverStart={() => setStatus(0)}
-        >
-          <OtherClassCard
-            coach_name="Bruce Woll"
-            title="Sport methods"
-            date="11 NOV"
-            places_left="14"
-            image={images.coach_one}
-            coach_status="CASTER"
-          />
-        </motion.div>
-
-        <motion.div
-          initial={{
-            opacity: 0.6,
-            scale: 0.9,
-          }}
-          animate={
-            status == 1 ? {
-              opacity: 1,
-              scale: 1,
-              transition: { duration: 0.5 }
-            } : {
-              opacity: 0.6,
-              scale: 0.9,
-            }
-          }
-          onClick={() => setStatus(1)}
-          onHoverStart={() => setStatus(1)}
-        >
-          <StudentClassCard
-            coach_name="Peter Bale"
-            title="Mental health"
-            date="17 NOV"
-            places_left="22"
-            image={images.coach_two}
-          />
-        </motion.div>
-
-        <motion.div
-          initial={{
-            opacity: 0.6,
-            scale: 0.9,
-          }}
-          animate={
-            status == 2 ? {
-              opacity: 1,
-              scale: 1,
-              transition: { duration: 0.5 }
-            } : {
-              opacity: 0.6,
-              scale: 0.9,
-            }
-          }
-          onClick={() => setStatus(2)}
-          onHoverStart={() => setStatus(2)}
-        >
-          <TeacherClassCard
-            coach_name="Liz Kayne"
-            title="Meditation methods"
-            date="9 NOV"
-            places_left="8"
-            image={images.coach_three}
-          />
-        </motion.div>
+            onClick={() => setStatus(index)}
+            onHoverStart={() => setStatus(index)}
+          >
+            {card.class}
+          </motion.div>))}
       </div>
-      <div className='class-description'>
-        {status == 0 && <div className='class-description-type other'>
-          PERSONALITY
-        </div>}
-        {status == 0 && <p className='class-description-text'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>}
-        {status == 1 && <div className='class-description-type student'>
-          STUDENT
-        </div>}
-        {status == 1 && <p className='class-description-text'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>}
-        {status == 2 && <div className='class-description-type teacher'>
-          TEACHER
-        </div>}
-        {status == 2 && <p className='class-description-text'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>}
-      </div>
+      {texts.map((text, index) => (
+        <motion.div
+          initial={{
+            x: -500,
+            opacity: 0.5
+          }}
+          animate={
+            status == index ? {
+              opacity: 1,
+              x: 0,
+              transition: { duration: 1 }
+            } : {
+              opacity: 0.5,
+              x: -500,
+              transition: { duration: 1 }
+            }
+          }
+          onClick={() => setStatus(index)}
+          onHoverStart={() => setStatus(index)}
+        >
+          <div className='class-description'>
+            {status == index && <div className={`class-description-type ${text.type}`}>
+              {text.title}
+            </div>}
+            {status == index && <p className='class-description-text'>
+              {text.description}
+            </p>}
+          </div>
+        </motion.div>))}
     </div>
-
   );
 };
 

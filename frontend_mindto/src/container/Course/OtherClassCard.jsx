@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 import './ClassCard.scss';
 import images from '../../constants/images';
-
 class ClassCard extends Component {
+
     render() {
         return (
             <div className='card-class-container'>
@@ -25,7 +25,6 @@ class ClassCard extends Component {
                     </div>
                 </div>
             </div>
-
         );
     }
 }
