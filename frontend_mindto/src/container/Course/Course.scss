@@ -58,11 +58,13 @@
             text-align: center;
             font-family: "GilroyMedium";
             height: 60px;
+            min-width: 200px;
             @media only screen and (max-width: 900px) {
                 font-size: 0.8rem;
                 padding: 5px 10px;
                 height: 25px;
                 margin-inline: auto;
+                min-width: 100px;
             }
         }
         .class-description-text {

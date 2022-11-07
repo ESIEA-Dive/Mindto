@@ -82,9 +82,9 @@ const Course = () => {
           <motion.div
             whileInView={
               status == index ?
-                { opacity: [0.6, 1], scale: [0.9, 1], transition: { duration: 0.5 } }
+                { opacity: [0.5, 1], scale: [0.9, 1], transition: { duration: 0.5 } }
                 :
-                { opacity: [1, 0.6], scale: [1, 0.9], transition: { duration: 0.5 } }
+                { opacity: [1, 0.5], scale: [1, 0.9], transition: { duration: 0.5 } }
             }
             onClick={() => setStatus(index)}
             onHoverStart={() => setStatus(index)}
