@@ -99,7 +99,7 @@
         height: auto;
         position: relative;
         z-index: 10;
-        margin-top: 24px;
+        margin-top: 30px;
         .logo {
             padding: 1px;
             height: 26px;
@@ -134,7 +134,7 @@
             justify-content: center;
             flex-direction: column;
             .principal-info {
-                font-family: "GilroyMedium";
+                font-family: "GilroyBold";
                 color: var(--white-color);
                 font-size: 0.9rem;
                 @media only screen and (max-width: 900px) {
@@ -142,7 +142,8 @@
                 }
             }
             .secondary-info {
-                font-family: "GilroyLight";
+                font-family: "GilroyRegular";
+                margin-top: 2px;
                 color: var(--white-color);
                 font-size: 0.7rem;
                 @media only screen and (max-width: 900px) {
