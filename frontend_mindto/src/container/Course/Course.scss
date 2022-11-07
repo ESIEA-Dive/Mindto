@@ -52,7 +52,7 @@
         }
         .class-description-type {
             border-radius: 15px;
-            color: var(--primary-color);
+            color: var(--white-color);
             padding: 15px 20px;
             font-size: 1.6rem;
             text-align: center;
@@ -77,14 +77,14 @@
                 margin-top: 10px;
             }
         }
-        .other {
-            background-color: var(--yellow-color);
-        }
-        .student {
+        .expert {
             background-color: var(--secondary-color);
         }
-        .teacher {
-            background-color: var(--orange-color);
+        .student {
+            background-color: var(--gray-color);
+        }
+        .pro {
+            background-color: #282828;
         }
     }
 }

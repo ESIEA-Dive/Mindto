@@ -40,10 +40,9 @@
         }
         .type-class {
             position: absolute;
-            font-family: "GilroyBold";
+            font-family: "GilroyMedium";
             font-size: 0.9rem;
-            padding: 10px;
-            padding: 5px;
+            padding: 5px 10px;
             border-radius: 10px;
             top: -10px;
             margin-left: 5%;
@@ -53,41 +52,43 @@
                 top: -6px;
             }
         }
-        .other {
-            background-color: var(--yellow-color);
-            color: black;
+        .expert {
+            background-color: var(--secondary-color);
+            color: white;
         }
         .student {
-            background-color: var(--secondary-color);
-            color: black;
+            background-color: var(--gray-color);
+            color: white;
         }
-        .teacher {
-            background-color: var(--orange-color);
-            color: black;
+        .pro {
+            background-color: #282828;
+            color: white;
         }
-        .with-coach {
-            font-size: 0.7rem;
+        .pillar {
+            font-size: 0.8rem;
             padding: 10px;
             color: var(--white-color);
             font-family: "GilroyLight";
+            margin-top: -5px;
             @media only screen and (max-width: 900px) {
-                font-size: 0.6rem;
+                font-size: 0.7rem;
             }
         }
         .separation {
             display: inline-block;
-            background-color: white;
+            background-color: var(--white-color);
             height: 1px;
             width: 50px;
-            margin-bottom: 7px;
+            margin-bottom: 12px;
             @media only screen and (max-width: 900px) {
                 width: 30px;
             }
         }
         .name {
             font-family: "GilroyMedium";
-            color: white;
+            color: var(--white-color);
             font-size: 1rem;
+            margin-top: -7px;
             @media only screen and (max-width: 900px) {
                 font-size: 0.8rem;
             }
@@ -96,72 +97,68 @@
     .logo_background {
         width: 100%;
         height: auto;
-        background-color: black;
         position: relative;
         z-index: 10;
-        margin-top: 6px;
-        .demi-background {
-            background-color: var(--primary-color);
-            height: 50%;
-            width: 100%;
-            position: absolute;
-            z-index: -10;
-        }
+        margin-top: 24px;
         .logo {
+            padding: 1px;
             height: 26px;
             width: 26px;
             margin: auto;
-            margin-top: 6px;
+            margin-top: -13px;
             border-radius: 100%;
-            background-color: black;
+            background-color: var(--lightGray-color);
+            border: 1px solid var(--white-color);
         }
-        .other {
-            border: 1px solid var(--yellow-color);
-        }
-        .teacher {
-            border: 1px solid var(--orange-color);
+        .expert {
+            background-color: var(--secondary-color);
         }
         .student {
-            border: 1px solid var(--secondary-color);
+            background-color: var(--gray-color);
+        }
+        .pro {
+            background-color: black;
         }
     }
     .bottom {
-        background-color: black;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         display: flex;
         justify-content: space-between;
         flex-direction: row;
         padding: 0 15px 10px 15px;
-        margin-top: -5px;
         z-index: 10;
-        @media only screen and (max-width: 900px) {
-            margin-top: 0px;
-        }
-        .date {
-            font-family: "GilroyMedium";
-            color: var(--white-color);
-            font-size: 0.9rem;
-            @media only screen and (max-width: 900px) {
-                font-size: 0.6rem;
+        margin-top: -6px;
+        .center-column {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .principal-info {
+                font-family: "GilroyMedium";
+                color: var(--white-color);
+                font-size: 0.9rem;
+                @media only screen and (max-width: 900px) {
+                    font-size: 0.6rem;
+                }
+            }
+            .secondary-info {
+                font-family: "GilroyLight";
+                margin-top: 2px;
+                color: var(--white-color);
+                font-size: 0.7rem;
+                @media only screen and (max-width: 900px) {
+                    font-size: 0.5rem;
+                }
             }
         }
-        .places-left {
-            font-family: "GilroyMedium";
-            color: var(--secondary-color);
-            font-size: 0.9rem;
-            @media only screen and (max-width: 900px) {
-                font-size: 0.6rem;
-            }
-        }
-        .other {
-            color: var(--yellow-color);
-        }
-        .teacher {
-            color: var(--orange-color);
-        }
-        .student {
-            color: var(--secondary-color);
-        }
+    }
+    .expert {
+        background-color: var(--secondary-color);
+    }
+    .student {
+        background-color: var(--gray-color);
+    }
+    .pro {
+        background-color: black;
     }
 }

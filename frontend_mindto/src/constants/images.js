@@ -13,10 +13,14 @@ import physical from '../assets/physical.jpg';
 import coach_one from '../assets/coach_one.jpg';
 import coach_two from '../assets/coach_two.jpg';
 import coach_three from '../assets/coach_three.jpg';
-import mindto_logo_card_teacher from '../assets/mindto_logo_card_teacher.png';
-import mindto_logo_card_other from '../assets/mindto_logo_card_other.png';
-import mindto_logo_card_student from '../assets/mindto_logo_card_student.png';
+import mindto_logo_card from '../assets/mindto_logo_card.png';
 import member from '../assets/member.jpg';
+
+import testimonial_one from '../assets/testimonial_one.jpg';
+import testimonial_two from '../assets/testimonial_two.jpg';
+import testimonial_three from '../assets/testimonial_three.jpg';
+import testimonial_four from '../assets/testimonial_four.jpg';
+
 
 const imgs = {
     logo,
@@ -33,10 +37,12 @@ const imgs = {
     mindto_logo_green,
     mindto_w,
     mindto_s,
-    mindto_logo_card_other,
-    mindto_logo_card_student,
-    mindto_logo_card_teacher,
+    mindto_logo_card,
     member,
+    testimonial_one,
+    testimonial_two,
+    testimonial_three,
+    testimonial_four,
 };
 
 export default imgs; 
