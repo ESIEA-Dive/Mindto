@@ -11,126 +11,55 @@
     .pillars-title {
         font-family: "GilroyBold";
         font-size: 2.4rem;
-        margin-right: 10%;
-        margin-left: 10%;
+        margin-inline: 10%;
     }
 
     .pillars-description {
         margin-top: 20px;
-        margin-right: 10%;
-        margin-left: 10%;
+        margin-inline: 10%;
         font-size: 1.4rem;
         font-family: "GilroyRegular";
     }
 
     .pillars-content {
-        margin-top: 20px;
-        margin-right: 10%;
-        margin-left: 10%;
+        margin-top: 40px;
+        margin-inline: 12%;
         width: auto;
         height: auto;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
 
-        .intellectual {
-            background-color: rgba(96, 167, 216, 255);
-        }
+        .pillars-all-names {
+            width: auto;
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
 
-        .environmental {
-            background-color: rgba(65, 176, 135, 255);
-        }
+            .pillars-case {
+                width: 110px;
+                height: 30px;
+                border: 1px solid var(--white-color);
+                border-radius: 15px;
+                background-color: var(--primary-color);
 
-        .financial {
-            background-color: rgba(228, 113, 23, 255);
-        }
-
-        .spiritual {
-            background-color: rgba(236, 232, 225, 255);
-        }
-
-        .physical {
-            background-color: rgba(223, 85, 65, 255);
-        }
-
-        .social {
-            background-color: rgba(228, 131, 143, 255);
-        }
-
-        .occupational {
-            background-color: rgba(236, 192, 85, 255);
-        }
-
-        .pillars-content-left {
-            width: 40%;
-            height: auto;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            border: 5px solid var(--white-color);
-            border-radius: 30px;
-
-            .pillars-content-left-column {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                margin-left: 30%;
-                margin-right: 30%;
-                width: auto;
-                height: auto;
-
-                :not(:first-child) {
-                    margin-top: 15px;
-                }
-
-                .pillars-content-left-row {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: left;
-
-                    .pillars-content-left-circle {
-                        width: 30px;
-                        height: 30px;
-                        border-radius: 90px;
-                    }
-
-                    .pillars-content-left-pillar {
-                        margin-top: 7px;
-                        margin-left: 10px;
-                    }
-                }
-            }
-        }
-
-        .pillars-content-right {
-            width: 65%;
-            height: auto;
-            margin-left: -5%;
-
-            .pillars-content-right-box {
-                width: 100%;
-                height: 100%;
-                border-radius: 30px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding-inline: 20%;
-
-                .pillars-logo {
-                    width: 80px;
-                    height: 80px;
-                    color: var(--primary-color);
-                }
-                .pillars-intellectual-description {
-                    margin-top: 20px;
+                .pillars-name {
+                    margin-top: 5px;
                     text-align: center;
-                    font-size: 1rem;
+                    font-size: 0.9rem;
                     font-family: "GilroyRegular";
-                    color: var(--primary-color);
-
                 }
             }
+
+        }
+
+        .pillars-info {
+            margin-top: 10px;
+            width: auto;
+            height: 300px;
+            border: 1px solid var(--white-color);
+            border-radius: 15px;
+            background-color: var(--secondary-color);
         }
     }
-
-
 }

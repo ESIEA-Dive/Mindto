@@ -16,46 +16,33 @@ const Pillars = () => {
         <p className='pillars-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet vehicula elit a accumsan. 
             Duis at urna ut quam auctor pharetra quis nec tortor. Nunc non eros ut sem aliquet aliquam ac nec magna.</p>
         <div className='pillars-content'>
-          <div className='pillars-content-left'>
-            <div className='pillars-content-left-column'>
-              <div className='pillars-content-left-row'>
-                <div className='pillars-content-left-circle intellectual'></div>
-                <p className='pillars-content-left-pillar'>Intellectual</p>
-              </div>
-              <div className='pillars-content-left-row'>
-                <div className='pillars-content-left-circle environmental'></div>
-                <p className='pillars-content-left-pillar'>Environmental</p>
-              </div>
-              <div className='pillars-content-left-row'>
-                <div className='pillars-content-left-circle financial'></div>
-                <p className='pillars-content-left-pillar'>Financial</p>
-              </div> 
-              <div className='pillars-content-left-row'>
-                <div className='pillars-content-left-circle spiritual'></div>
-                <p className='pillars-content-left-pillar'>Spiritual</p>
-              </div> 
-              <div className='pillars-content-left-row'>
-                <div className='pillars-content-left-circle physical'></div>
-                <p className='pillars-content-left-pillar'>Physical</p>
-              </div>  
-              <div className='pillars-content-left-row'>
-                <div className='pillars-content-left-circle social'></div>
-                <p className='pillars-content-left-pillar'>Social</p>
-              </div>  
-              <div className='pillars-content-left-row'>
-                <div className='pillars-content-left-circle occupational'></div>
-                <p className='pillars-content-left-pillar'>Occupational</p>
-              </div>  
+          <div className='pillars-all-names'>
+            <div className='pillars-case'>
+              <p className='pillars-name'>Intellectual</p>
+            </div>
+            <div className='pillars-case'>
+              <p className='pillars-name'>Emotional</p>
+            </div>
+            <div className='pillars-case'>
+              <p className='pillars-name'>Environmental</p>
+            </div>
+            <div className='pillars-case'>
+              <p className='pillars-name'>Financial</p>
+            </div>
+            <div className='pillars-case'>
+              <p className='pillars-name'>Spiritual</p>
+            </div>
+            <div className='pillars-case'>
+              <p className='pillars-name'>Physical</p>
+            </div>
+            <div className='pillars-case'>
+              <p className='pillars-name'>Social</p>
+            </div>
+            <div className='pillars-case'>
+              <p className='pillars-name'>Occupational</p>
             </div>
           </div>
-          <div className='pillars-content-right'>
-            <div className='pillars-content-right-box intellectual'>
-              <HiLightBulb className='pillars-logo'/>
-              <p className='pillars-intellectual-description'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet vehicula elit a accumsan. 
-            Duis at urna ut quam auctor pharetra quis nec tortor. Nunc non eros ut sem aliquet aliquam ac nec magna.</p>
-            </div>
-          </div>
+          <div className='pillars-info'></div>
         </div>
     </div>
   );
