@@ -183,7 +183,6 @@
                     font-family: "GilroyRegular";
                     font-size: 1.2rem;
                     line-height: 1.5;
-
                     @media only screen and (max-width: 900px) {
                         font-size: 0.7rem;
                         margin-top: -2vh;
@@ -204,7 +203,7 @@
 
                     .testimonial-quote-scroll-down-text {
                         color: white;
-                        opacity: 0.2;
+                        opacity: 0.3;
                         font-size: 0.7rem;
 
                         @media only screen and (max-width: 900px) {
@@ -215,7 +214,7 @@
 
                     .scroll-down-icon {
                         color: white;
-                        opacity: 0.2;
+                        opacity: 0.3;
                         height: 12px;
                         width: 12px;
                         margin-left: 4px;
