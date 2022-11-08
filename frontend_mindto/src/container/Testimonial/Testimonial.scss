@@ -7,16 +7,20 @@
     justify-content: center;
     flex-direction: column;
     color: var(--primary-color);
+
     .testimonial-quote {
         height: 100vh;
         width: auto;
-        padding-inline: 20%;
+        padding-inline: 20vw;
         display: flex;
         flex-direction: row;
+
         @media only screen and (max-width: 900px) {
             flex-direction: column;
+            justify-content: center;
             height: 100vh;
         }
+
         .testimonial-left-column {
             width: 40%;
             height: auto;
@@ -25,39 +29,50 @@
             justify-content: center;
             text-align: center;
             margin: auto;
+
             @media only screen and (max-width: 900px) {
-                width: 100%;
-                margin-top: 35vh;
+                width: auto;
+                margin: 0;
             }
+
             .line1 {
                 position: absolute;
                 background-color: var(--white-color);
                 height: 5vw;
-                border-radius: 30px;
+                border-radius: 100px;
                 width: 40vw;
                 transform: rotate(130deg);
                 transform-origin: 30%;
-                margin-bottom: 20%;
                 z-index: 0;
+
                 @media only screen and (max-width: 900px) {
-                    margin-left: 19%;
+                    transform-origin: 70%;
+                    margin-top: 10%;
                 }
+
             }
+
             .line2 {
                 position: absolute;
                 background-color: var(--secondary-color);
                 height: 3.8vw;
-                border-radius: 30px;
+                border-radius: 100px;
                 width: 27vw;
                 transform: rotate(130deg);
                 transform-origin: 45%;
-                margin-left: 9%;
-                margin-bottom: 20%;
                 z-index: 0;
+
                 @media only screen and (max-width: 900px) {
-                    margin-left: 29%;
+                    transform-origin: 90%;
+                    margin-top: 10%;
                 }
+
             }
+
+            .above-lines {
+                z-index: 20;
+            }
+
             .testimonial-picture {
                 margin: auto;
                 height: 15vw;
@@ -68,6 +83,7 @@
                 object-fit: cover;
                 z-index: 10;
             }
+
             .testimonial-name {
                 margin-top: 20px;
                 font-family: "GilroyMedium";
@@ -75,21 +91,27 @@
                 color: white;
                 opacity: 0.6;
                 z-index: 10;
+
                 @media only screen and (max-width: 900px) {
                     font-size: 0.7rem;
+                    margin-top: 5px;
                 }
             }
+
             .testimonial-job {
                 margin-top: 6px;
                 font-family: "GilroyRegular";
                 color: white;
                 font-size: 1.2rem;
                 z-index: 10;
+
                 @media only screen and (max-width: 900px) {
                     font-size: 0.7rem;
                 }
             }
+
         }
+
         .testimonial-right-column {
             width: 60%;
             height: auto;
@@ -97,30 +119,52 @@
             flex-direction: column;
             justify-content: left;
             margin: auto;
+
             @media only screen and (max-width: 900px) {
-                width: 100%;
-                margin-bottom: 25vh;
+                width: auto;
+                margin: 0;
             }
-            .testimonial-quote-symbol {
-                font-size: 4rem;
-                color: white;
-                z-index: 10;
-                margin-top: 8vh;
-            }
+
             .testimonial-quote-scroll-container {
                 height: 100%;
                 margin: 0em;
                 z-index: 10;
-                -ms-overflow-style: none;
-                /* Internet Explorer 10+ */
-                scrollbar-width: none;
-                /* Firefox */
-                 ::-webkit-scrollbar {
-                    display: none;
-                    /* Safari and Chrome */
+                /* width */
+                ::-webkit-scrollbar {
+                    width: 4px;
                 }
+
+                /* Track */
+                ::-webkit-scrollbar-track {
+                    background: black
+                }
+
+                /* Handle */
+                ::-webkit-scrollbar-thumb {
+                    background: var(--secondary-color);
+                    border-radius: 50px;
+                    border: 14px solid rgba(0, 0, 0, 0);
+                    margin-left: 10px;
+                }
+
+                /* Handle on hover */
+                ::-webkit-scrollbar-thumb:hover {
+                    background: var(--white-color);
+                }
+
+                .testimonial-quote-symbol {
+                    font-size: 4rem;
+                    color: white;
+                    z-index: 10;
+                    margin-top: 8vh;
+                    text-align: left;
+                    @media only screen and (max-width: 900px) {
+                        margin-top: 1vh;
+                    }
+                }
+
                 .testimonial-quote-text {
-                    text-align: justify;
+                    text-align: left;
                     color: white;
                     overflow-y: scroll;
                     text-overflow: clip;
@@ -131,31 +175,38 @@
                     -webkit-box-orient: vertical;
                     font-family: "GilroyRegular";
                     font-size: 1.2rem;
-                    line-height: 1.8;
+                    line-height: 1.5;
+
                     @media only screen and (max-width: 900px) {
                         font-size: 0.7rem;
+                        margin-top: -4vh;
                     }
                 }
             }
+
             .testimonial-scroll-and-deco-container {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+
                 .testimonial-quote-scroll-down-container {
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
                     margin-top: 20px;
+
                     .testimonial-quote-scroll-down-text {
                         color: white;
                         opacity: 0.3;
                         font-size: 1rem;
                         margin-right: 10px;
                         margin-top: 2px;
+
                         @media only screen and (max-width: 900px) {
                             font-size: 0.6rem;
                         }
                     }
+
                     .scroll-down-icon {
                         color: white;
                         opacity: 0.3;
@@ -164,34 +215,38 @@
                         margin-left: 10px;
                     }
                 }
+
                 .line3-to-5 {
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
                     margin-top: 8vw;
+
                     .line3 {
                         background-color: var(--secondary-color);
                         height: 1.5vw;
-                        border-radius: 30px;
+                        border-radius: 100px;
                         width: 7vw;
                         transform: rotate(130deg);
                         transform-origin: 100%;
                         z-index: 0;
                         margin-right: -6vw;
                     }
+
                     .line4 {
                         background-color: var(--white-color);
                         height: 1.5vw;
-                        border-radius: 30px;
+                        border-radius: 100px;
                         width: 9vw;
                         transform: rotate(130deg);
                         transform-origin: 100%;
                         z-index: 0;
                     }
+
                     .line5 {
                         background-color: var(--secondary-color);
                         height: 1.5vw;
-                        border-radius: 30px;
+                        border-radius: 100px;
                         width: 4vw;
                         transform: rotate(130deg);
                         transform-origin: 100%;
@@ -201,13 +256,16 @@
             }
         }
     }
+
     .testimonial-swiper {
         width: 100%;
         height: auto;
     }
+
     .swiper-pagination {
         margin-bottom: 7vw;
     }
+
     .swiper-pagination-bullet {
         border-radius: 50px;
         width: 10px;
@@ -215,25 +273,50 @@
         opacity: 1;
         background: var(--gray-color)
     }
+
     .swiper-pagination-bullet-active {
         background: var(--white-color);
         width: 35px;
         border-radius: 10px;
     }
+
     .swiper-button-prev {
         color: var(--white-color);
-        margin-left: 8vw;
+        margin-left: 6vw;
         transform: scale(0.7);
+
         @media only screen and (max-width: 900px) {
             transform: scale(0.5)
         }
     }
+
     .swiper-button-next {
         color: var(--white-color);
-        margin-right: 8vw;
+        margin-right: 6vw;
         transform: scale(0.7);
+
         @media only screen and (max-width: 900px) {
             transform: scale(0.5)
         }
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
     }
 }
