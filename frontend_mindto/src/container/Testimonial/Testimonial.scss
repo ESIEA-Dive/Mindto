@@ -85,7 +85,7 @@
             }
 
             .testimonial-name {
-                margin-top: 20px;
+                margin-top: 10px;
                 font-family: "GilroyMedium";
                 font-size: 1.2rem;
                 color: white;
@@ -129,9 +129,11 @@
                 height: 100%;
                 margin: 0em;
                 z-index: 10;
+
                 /* width */
                 ::-webkit-scrollbar {
                     width: 4px;
+
                     @media only screen and (max-width: 900px) {
                         width: 2px;
                     }
@@ -161,6 +163,7 @@
                     z-index: 10;
                     margin-top: 8vh;
                     text-align: left;
+
                     @media only screen and (max-width: 900px) {
                         margin-top: 1vh;
                         font-size: 2.5rem;
@@ -201,22 +204,27 @@
 
                     .testimonial-quote-scroll-down-text {
                         color: white;
-                        opacity: 0.3;
-                        font-size: 1rem;
-                        margin-right: 10px;
-                        margin-top: 2px;
+                        opacity: 0.2;
+                        font-size: 0.7rem;
 
                         @media only screen and (max-width: 900px) {
-                            font-size: 0.6rem;
+                            font-size: 0.4rem;
+                            margin-top: 1px;
                         }
                     }
 
                     .scroll-down-icon {
                         color: white;
-                        opacity: 0.3;
-                        height: 20px;
-                        width: 20px;
-                        margin-left: 10px;
+                        opacity: 0.2;
+                        height: 12px;
+                        width: 12px;
+                        margin-left: 4px;
+
+                        @media only screen and (max-width: 900px) {
+                            height: 10px;
+                            width: 10px;
+                            margin-left: 3px;
+                        }
                     }
                 }
 
