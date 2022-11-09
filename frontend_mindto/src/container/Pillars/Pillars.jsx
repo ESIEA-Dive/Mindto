@@ -56,6 +56,7 @@ const Pillars = () => {
             </div>
           </div>
           <div className='pillars-info'>
+          {status &&(<div className='pillars-gradient-video'></div>)}
             <video src={images.intellectual_video} muted onClick={handlePause} ref={videoRef} className='pillars-video'></video>
             {status &&(<IoPlayOutline className='pillars-button' onClick={handlePlay}/>)}
             <div className='pillars-reference'>
