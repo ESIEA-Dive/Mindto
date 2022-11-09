@@ -80,7 +80,7 @@
                 width: 15vw;
                 min-height: 100px;
                 min-width: 100px;
-                border-radius: 20px;
+                border-radius: 40px;
                 object-fit: cover;
                 z-index: 10;
             }
@@ -133,7 +133,7 @@
 
                 /* width */
                 ::-webkit-scrollbar {
-                    width: 4px;
+                    width: 3px;
 
                     @media only screen and (max-width: 900px) {
                         width: 2px;
@@ -147,7 +147,7 @@
 
                 /* Handle */
                 ::-webkit-scrollbar-thumb {
-                    background: var(--secondary-color);
+                    background: var(--white-color);
                     border-radius: 50px;
                     border: 14px solid rgba(0, 0, 0, 0);
                     margin-left: 10px;
@@ -155,7 +155,7 @@
 
                 /* Handle on hover */
                 ::-webkit-scrollbar-thumb:hover {
-                    background: var(--white-color);
+                    background: var(--secondary-color);
                 }
 
                 .testimonial-quote-symbol {
@@ -298,6 +298,23 @@
         margin-left: 4vw;
         transform: scale(0.7);
 
+        &:hover {
+            color: var(--secondary-color);
+            transform: scale(0.8);
+            @media only screen and (max-width: 900px) {
+                transform: scale(0.5);
+            }
+        }
+
+        &:focus {
+            color: var(--secondary-color);
+            transform: scale(0.8);
+
+            @media only screen and (max-width: 900px) {
+                transform: scale(0.5);
+            }
+        }
+
         @media only screen and (max-width: 900px) {
             transform: scale(0.4);
             margin-left: 1vw;
@@ -308,6 +325,24 @@
         color: var(--white-color);
         margin-right: 4vw;
         transform: scale(0.7);
+
+        &:hover {
+            color: var(--secondary-color);
+            transform: scale(0.8);
+
+            @media only screen and (max-width: 900px) {
+                transform: scale(0.5);
+            }
+        }
+
+        &:focus {
+            color: var(--secondary-color);
+            transform: scale(0.8);
+
+            @media only screen and (max-width: 900px) {
+                transform: scale(0.5);
+            }
+        }
 
         @media only screen and (max-width: 900px) {
             transform: scale(0.4);
