@@ -11,7 +11,7 @@
     .testimonial-quote {
         height: 100vh;
         width: auto;
-        padding-inline: 20vw;
+        padding-inline: 17vw;
         display: flex;
         flex-direction: row;
 
@@ -19,6 +19,7 @@
             flex-direction: column;
             justify-content: center;
             height: 100vh;
+            padding-inline: 12vw;
         }
 
         .testimonial-left-column {
@@ -183,6 +184,7 @@
                     font-family: "GilroyRegular";
                     font-size: 1.2rem;
                     line-height: 1.5;
+
                     @media only screen and (max-width: 900px) {
                         font-size: 0.7rem;
                         margin-top: -2vh;
@@ -199,7 +201,7 @@
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
-                    margin-top: 20px;
+                    margin-top: 14px;
 
                     .testimonial-quote-scroll-down-text {
                         color: white;
@@ -297,7 +299,8 @@
         transform: scale(0.7);
 
         @media only screen and (max-width: 900px) {
-            transform: scale(0.4)
+            transform: scale(0.4);
+            margin-left: 1vw;
         }
     }
 
@@ -307,7 +310,8 @@
         transform: scale(0.7);
 
         @media only screen and (max-width: 900px) {
-            transform: scale(0.4)
+            transform: scale(0.4);
+            margin-right: 1vw;
         }
     }
 

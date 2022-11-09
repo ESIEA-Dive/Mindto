@@ -62,7 +62,16 @@ const Testimonial = () => {
       >
         {people.map((person, index) => (
           <SwiperSlide className="testimonial-swiper-slide">
-            <div className='testimonial-quote'>
+            <motion.div
+              className='testimonial-quote'
+              initial={{
+                opacity: 0,
+              }}
+              whileInView={{
+                opacity: [0, 1],
+                transition: { duration: 0.5 }
+              }}
+            >
               <div className='testimonial-left-column'>
                 <motion.div
                   whileInView={{
@@ -165,7 +174,7 @@ const Testimonial = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </SwiperSlide>
         ))}
       </Swiper>
