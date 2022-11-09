@@ -21,6 +21,8 @@ import testimonial_two from '../assets/testimonial_two.jpg';
 import testimonial_three from '../assets/testimonial_three.jpg';
 import testimonial_four from '../assets/testimonial_four.jpg';
 
+import intellectual_video from '../assets/intellectual_video.mp4';
+
 
 const imgs = {
     logo,
@@ -43,6 +45,7 @@ const imgs = {
     testimonial_two,
     testimonial_three,
     testimonial_four,
+    intellectual_video,
 };
 
 export default imgs; 

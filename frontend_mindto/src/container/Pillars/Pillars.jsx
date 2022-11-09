@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import images from "../../constants/images";
 
-import { GiEcology,GiWallet, GiOilySpiral, GiWeightLiftingUp } from 'react-icons/gi';
-import { RiMentalHealthFill, RiTimeFill } from 'react-icons/ri';
-import { HiLightBulb } from 'react-icons/hi';
-import { FaUserFriends } from 'react-icons/fa';
-
+import { GiBrain } from 'react-icons/gi';
+import { IoPlayOutline } from 'react-icons/io5';
 import { AppWrap } from '../../wrapper';
 
 import './Pillars.scss';
 
 const Pillars = () => {
+
+  const [status, setStatus] = useState(true);
+
+  const videoRef = useRef();
+
+  const handlePlay = () => {
+    setStatus(false);
+    videoRef.current.play();
+  };
+
+  const handlePause = () => {
+    setStatus(true);
+    videoRef.current.pause();
+  };
+
   return (
     <div className='pillars-container'>
         <p className='pillars-title'>The Pillars</p>
@@ -42,7 +55,14 @@ const Pillars = () => {
               <p className='pillars-name'>Occupational</p>
             </div>
           </div>
-          <div className='pillars-info'></div>
+          <div className='pillars-info'>
+            <video src={images.intellectual_video} muted onClick={handlePause} ref={videoRef} className='pillars-video'></video>
+            {status &&(<IoPlayOutline className='pillars-button' onClick={handlePlay}/>)}
+            <div className='pillars-reference'>
+              <GiBrain className='pillars-reference-logo'/>
+              <p className='pillars-reference-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet velit ac lectus malesuada imperdiet. Pellentesque efficitur urna ac felis porttitor blandit. </p>
+            </div>
+          </div>
         </div>
     </div>
   );
