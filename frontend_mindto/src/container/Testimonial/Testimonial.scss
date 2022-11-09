@@ -1,7 +1,7 @@
 .testimonial-container {
     height: auto;
     width: 100%;
-    background-color: black;
+    background-color: var(--primary-color);
     position: relative;
     display: flex;
     justify-content: center;
@@ -142,7 +142,7 @@
 
                 /* Track */
                 ::-webkit-scrollbar-track {
-                    background: black
+                    background: var(--primary-color);
                 }
 
                 /* Handle */
