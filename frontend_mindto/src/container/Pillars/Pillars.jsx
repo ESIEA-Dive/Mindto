@@ -82,9 +82,18 @@ const Pillars = () => {
 
   return (
     <div className='pillars-container'>
-      <p className='pillars-title'>The Pillars</p>
-      <p className='pillars-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet vehicula elit a accumsan.
-        Duis at urna ut quam auctor pharetra quis nec tortor. Nunc non eros ut sem aliquet aliquam ac nec magna.</p>
+      <motion.p
+        className='pillars-title'
+        whileInView={{ opacity: [0, 1], x: [-20, 0], y: [-20, 0], transition: { duration: 0.5 } }}
+      >
+        Team
+      </motion.p>
+      <motion.p
+        className='pillars-description'
+        whileInView={{ opacity: [0, 1], x: [-20, 0], y: [-20, 0], transition: { duration: 0.5 } }}
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </motion.p>
       <div className='pillars-content'>
         <div className='pillars-all-names'>
           {pillars.map((pillar, index) => (<motion.div
@@ -92,6 +101,7 @@ const Pillars = () => {
               setPillarNumber(index);
               handlePause();
             }}
+            whileInView={{ opacity: [0, 1], transition: { duration: 0.5 } }}
             //onHoverStart={() => setPillarNumber(index)}
             key={index}
           >
