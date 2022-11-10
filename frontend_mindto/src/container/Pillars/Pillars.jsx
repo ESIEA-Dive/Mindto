@@ -2,8 +2,10 @@ import React, { useRef, useState } from 'react';
 import images from "../../constants/images";
 import { motion } from "framer-motion"
 
-import { GiBrain } from 'react-icons/gi';
-import { IoPlayOutline } from 'react-icons/io5';
+import { GiInspiration, GiEcology, GiReceiveMoney, GiOilySpiral, GiMuscleUp, GiThreeFriends } from 'react-icons/gi';
+import { RiMentalHealthFill } from 'react-icons/ri';
+import { IoPlayOutline, IoTimerOutline } from 'react-icons/io5';
+
 import { AppWrap } from '../../wrapper';
 
 import './Pillars.scss';
@@ -29,49 +31,49 @@ const Pillars = () => {
     {
       title: "Intellectual",
       video: images.intellectual_video,
-      logo: <GiBrain className='pillars-reference-logo' />,
+      logo: <GiInspiration className='pillars-reference-logo' />,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet vehicula elit a accumsan. Duis at urna ut quam auctor pharetra quis nec tortor. Nunc non eros ut sem aliquet aliquam ac nec magna."
     },
     {
       title: "Emotional",
       video: images.emotional_video,
-      logo: <GiBrain className='pillars-reference-logo' />,
+      logo: <RiMentalHealthFill className='pillars-reference-logo' />,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet vehicula elit a accumsan. Duis at urna ut quam auctor pharetra quis nec tortor. Nunc non eros ut sem aliquet aliquam ac nec magna. "
     },
     {
       title: "Environmental",
       video: images.environmental_video,
-      logo: <GiBrain className='pillars-reference-logo' />,
+      logo: <GiEcology className='pillars-reference-logo' />,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet vehicula elit a accumsan.Duis at urna ut quam auctor pharetra quis nec tortor. Nunc non eros ut sem aliquet aliquam ac nec magna. "
     },
     {
       title: "Financial",
       video: images.financial_video,
-      logo: <GiBrain className='pillars-reference-logo' />,
+      logo: <GiReceiveMoney className='pillars-reference-logo' />,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet vehicula elit a accumsan. Duis at urna ut quam auctor pharetra quis nec tortor. Nunc non eros ut sem aliquet aliquam ac nec magna. "
     },
     {
       title: "Spiritual",
       video: images.spiritual_video,
-      logo: <GiBrain className='pillars-reference-logo' />,
+      logo: <GiOilySpiral className='pillars-reference-logo' />,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet vehicula elit a accumsan. Duis at urna ut quam auctor pharetra quis nec tortor. Nunc non eros ut sem aliquet aliquam ac nec magna. "
     },
     {
       title: "Physical",
       video: images.physical_video,
-      logo: <GiBrain className='pillars-reference-logo' />,
+      logo: <GiMuscleUp className='pillars-reference-logo' />,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet vehicula elit a accumsan. Duis at urna ut quam auctor pharetra quis nec tortor. Nunc non eros ut sem aliquet aliquam ac nec magna. "
     },
     {
       title: "Social",
       video: images.social_video,
-      logo: <GiBrain className='pillars-reference-logo' />,
+      logo: <GiThreeFriends className='pillars-reference-logo' />,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet vehicula elit a accumsan. Duis at urna ut quam auctor pharetra quis nec tortor. Nunc non eros ut sem aliquet aliquam ac nec magna. "
     },
     {
       title: "Occupational",
       video: images.occupational_video,
-      logo: <GiBrain className='pillars-reference-logo' />,
+      logo: <IoTimerOutline className='pillars-reference-logo' />,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet vehicula elit a accumsan. Duis at urna ut quam auctor pharetra quis nec tortor. Nunc non eros ut sem aliquet aliquam ac nec magna. "
     },
 
