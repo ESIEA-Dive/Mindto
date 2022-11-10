@@ -102,15 +102,33 @@ const Pillars = () => {
         </div>
         {pillars.map((pillar, index) => {
           if (pillar_number === index)
-            return <div className='pillars-info'>
-              {!status && (<div className='pillars-logo-background'></div>)}
+            return <motion.div
+              className='pillars-info'
+              initial={{
+                opacity: 0,
+              }}
+              whileInView={{
+                opacity: [0, 1],
+                transition: { duration: 0.5 },
+              }}
+            >
+              {!status && (<motion.div
+                className='pillars-logo-background'
+                initial={{
+                  opacity: 0,
+                }}
+                whileInView={{
+                  opacity: [0, 1],
+                  transition: { duration: 0.8 },
+                }}
+              ></motion.div>)}
               {pillar.logo}
               {status && (<p className='pillars-reference-text'>{pillar.description}</p>)}
               {status && (<IoPlayOutline className='pillars-button pillars-button-play' onClick={handlePlay} />)}
               {!status && (<IoPauseOutline className='pillars-button' onClick={handlePause} />)}
               {status && (<div className='pillars-gradient-video' onClick={handlePlay}></div>)}
               <video src={pillar.video} muted onClick={handlePause} ref={videoRef} className='pillars-video'></video>
-            </div>
+            </motion.div>
           else
             return null;
         })}
