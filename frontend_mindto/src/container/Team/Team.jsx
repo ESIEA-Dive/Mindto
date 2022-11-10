@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { AppWrap } from '../../wrapper';
 import images from '../../constants/images';
 import { motion } from "framer-motion"
+import { BsInstagram, BsLinkedin } from "react-icons/bs";
 
 import './Team.scss';
 
@@ -12,25 +13,25 @@ const Team = () => {
   const members = [
     {
       name: "Member ONE",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       job: "job one",
       picture: images.testimonial_one,
     },
     {
       name: "Member TWO",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       job: "job two",
       picture: images.testimonial_two,
     },
     {
       name: "Member THREE",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       job: "job three",
       picture: images.testimonial_three,
     },
     {
       name: "Member FOUR",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       job: "job four",
       picture: images.testimonial_four,
     },
@@ -39,9 +40,12 @@ const Team = () => {
 
   return (
     <div className='team-container'>
-      <p className='title'>
+      <motion.p
+        className='title'
+        whileInView={{ opacity: [0, 1], x: [-20, 0], y: [-20, 0], transition: { duration: 0.5 } }}
+      >
         Team
-      </p>
+      </motion.p>
       <div className='team-group'>
         {members.map((member, index) => (<motion.div
           className='team-person'
@@ -76,6 +80,11 @@ const Team = () => {
               onHoverStart={() => setStatus(index)}
             >
               <p className='person-description'>{member.description}</p>
+              <div className='person-socials'>
+                <BsInstagram className='person-social-logo'/>
+              <BsLinkedin className='person-social-logo'/>
+              </div>
+              
             </motion.div>
             )}
           </div>
