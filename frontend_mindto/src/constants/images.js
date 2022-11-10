@@ -22,6 +22,13 @@ import testimonial_three from '../assets/testimonial_three.jpg';
 import testimonial_four from '../assets/testimonial_four.jpg';
 
 import intellectual_video from '../assets/intellectual_video.mp4';
+import emotional_video from '../assets/emotional_video.mp4';
+import environmental_video from '../assets/environmental_video.mp4';
+import financial_video from '../assets/financial_video.mp4';
+import spiritual_video from '../assets/spiritual_video.mp4';
+import physical_video from '../assets/physical_video.mp4';
+import social_video from '../assets/social_video.mp4';
+import occupational_video from '../assets/occupational_video.mp4';
 
 
 const imgs = {
@@ -46,6 +53,13 @@ const imgs = {
     testimonial_three,
     testimonial_four,
     intellectual_video,
+    emotional_video,
+    environmental_video,
+    financial_video,
+    spiritual_video,
+    physical_video,
+    social_video,
+    occupational_video
 };
 
 export default imgs; 
