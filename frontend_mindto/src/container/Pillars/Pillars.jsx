@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 import { GiInspiration, GiEcology, GiReceiveMoney, GiOilySpiral, GiMuscleUp, GiThreeFriends } from 'react-icons/gi';
 import { RiMentalHealthFill } from 'react-icons/ri';
-import { IoPlayOutline, IoTimerOutline } from 'react-icons/io5';
+import { IoPlayOutline, IoTimerOutline, IoPauseOutline } from 'react-icons/io5';
 
 import { AppWrap } from '../../wrapper';
 
