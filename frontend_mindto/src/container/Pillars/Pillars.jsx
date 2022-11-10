@@ -86,7 +86,10 @@ const Pillars = () => {
       <div className='pillars-content'>
         <div className='pillars-all-names'>
           {pillars.map((pillar, index) => (<motion.div
-            onClick={() => setPillarNumber(index)}
+            onClick={() => {
+              setPillarNumber(index);
+              handlePause();
+            }}
             //onHoverStart={() => setPillarNumber(index)}
             key={index}
           >
@@ -104,6 +107,8 @@ const Pillars = () => {
               {status && (<div className='pillars-gradient-video' onClick={handlePlay}></div>)}
               <video src={pillar.video} muted onClick={handlePause} ref={videoRef} className='pillars-video'></video>
             </div>
+          else
+            return null;
         })}
       </div>
     </div>

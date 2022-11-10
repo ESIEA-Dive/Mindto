@@ -71,7 +71,7 @@ const Team = () => {
               <p className='person-name'>{member.name}</p>
               <p className='person-status'>{member.job}</p>
             </motion.div>
-            {status == index && (<motion.div
+            {status === index && (<motion.div
               whileInView={{
                 opacity: [0, 1],
                 transition: { duration: 2 }
