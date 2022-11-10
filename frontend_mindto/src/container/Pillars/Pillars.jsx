@@ -103,9 +103,11 @@ const Pillars = () => {
         {pillars.map((pillar, index) => {
           if (pillar_number === index)
             return <div className='pillars-info'>
+              {!status && (<div className='pillars-logo-background'></div>)}
               {pillar.logo}
               {status && (<p className='pillars-reference-text'>{pillar.description}</p>)}
-              {status && (<IoPlayOutline className='pillars-button' onClick={handlePlay} />)}
+              {status && (<IoPlayOutline className='pillars-button pillars-button-play' onClick={handlePlay} />)}
+              {!status && (<IoPauseOutline className='pillars-button' onClick={handlePause} />)}
               {status && (<div className='pillars-gradient-video' onClick={handlePlay}></div>)}
               <video src={pillar.video} muted onClick={handlePause} ref={videoRef} className='pillars-video'></video>
             </div>
