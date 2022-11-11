@@ -86,7 +86,7 @@ const Pillars = () => {
         className='pillars-title'
         whileInView={{ opacity: [0, 1], x: [-20, 0], y: [-20, 0], transition: { duration: 0.5 } }}
       >
-        Team
+        Pillars
       </motion.p>
       <motion.p
         className='pillars-description'
